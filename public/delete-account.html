@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wequi Guard — Delete Account Request</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0e1117;
+      --card: #151a22;
+      --accent: #4fc3f7;
+      --accent-2: #9cefa8;
+      --text: #e9edf5;
+      --muted: #9aa7be;
+      --border: #222836;
+      --danger: #ff5c8d;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at 10% 20%, rgba(79, 195, 247, 0.16), transparent 30%),
+                  radial-gradient(circle at 80% 0%, rgba(156, 239, 168, 0.18), transparent 28%),
+                  linear-gradient(135deg, #0c0f15 0%, #0f1623 50%, #0b1019 100%);
+      color: var(--text);
+      font-family: 'Manrope', 'Segoe UI', system-ui, -apple-system, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 16px;
+    }
+
+    .shell {
+      width: 100%;
+      max-width: 860px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(22px, 3vw, 28px);
+      letter-spacing: -0.01em;
+    }
+
+    p.lead {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .required::after {
+      content: ' *';
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      background: #0d1119;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 12px;
+      color: var(--text);
+      font-size: 15px;
+      transition: border 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(79, 195, 247, 0.18);
+    }
+
+    textarea { min-height: 96px; resize: vertical; }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+      align-items: center;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-weight: 700;
+      font-size: 15px;
+      transition: transform 0.08s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    }
+
+    button:active { transform: translateY(1px); }
+
+    .primary-btn {
+      background: linear-gradient(120deg, var(--accent), var(--accent-2));
+      color: #0b1020;
+      box-shadow: 0 12px 30px rgba(79, 195, 247, 0.22);
+      flex: 1 1 220px;
+    }
+
+    .ghost-btn {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+      flex: 1 1 180px;
+    }
+
+    .checkbox-row {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .checkbox-row input { width: auto; margin-top: 4px; }
+
+    .note {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 4px;
+    }
+
+    .status {
+      font-size: 14px;
+      color: var(--accent-2);
+      min-height: 18px;
+    }
+
+    .error {
+      color: var(--danger);
+      font-weight: 600;
+    }
+
+    .compliance {
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .list { padding-left: 18px; margin: 8px 0 0; }
+
+    @media (max-width: 640px) {
+      body { padding: 20px 14px; }
+      .card { padding: 22px; }
+      .actions { flex-direction: column; }
+      button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="card" aria-labelledby="page-title">
+      <header>
+        <h1 id="page-title">Wequi Guard — Delete Account Request</h1>
+        <p class="lead">Submit this form to request deletion of your Wequi Guard account. We’ll prompt your email app to send the request to our support team. Nothing you enter here is stored on this site.</p>
+      </header>
+
+      <form id="delete-form" novalidate>
+        <div>
+          <label class="required" for="email">Email used to sign in</label>
+          <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+          <p class="note">We use this to locate your account in Firebase Auth.</p>
+        </div>
+
+        <div>
+          <label for="name">Full name (optional)</label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" />
+        </div>
+
+        <div>
+          <label for="reason">Reason for deletion (optional)</label>
+          <select id="reason" name="reason">
+            <option value="">Select a reason (optional)</option>
+            <option>Switching to another service</option>
+            <option>Privacy concerns</option>
+            <option>App issues/bugs</option>
+            <option>No longer need the service</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="notes">Additional notes (optional)</label>
+          <textarea id="notes" name="notes" placeholder="Anything you want us to know"></textarea>
+        </div>
+
+        <div class="checkbox-row">
+          <input id="confirm" name="confirm" type="checkbox" required />
+          <label class="required" for="confirm">I confirm I want to delete my account and associated data.</label>
+        </div>
+
+        <div class="status" id="status" role="status" aria-live="polite"></div>
+        <div class="status error" id="errors" role="alert" aria-live="polite"></div>
+
+        <div class="actions">
+          <button type="submit" class="primary-btn">Open email app to send request</button>
+          <button type="button" class="ghost-btn" id="copy-btn">Copy email text</button>
+        </div>
+      </form>
+
+      <section class="compliance" aria-label="Data handling details">
+        <strong>What happens next</strong>
+        <ul class="list">
+          <li>We delete your Wequi Guard account (Firebase Auth) and stored profile data (email, name, photo) plus any user-linked database records.</li>
+          <li>Aggregated analytics or crash-report data may remain in system logs for reliability and security; these are not tied to your active account.</li>
+          <li>Processing time: requests are handled within 90 days. You’ll get a confirmation email when complete.</li>
+        </ul>
+        <p style="margin-top:10px;">Developer: Wequitech — Contact: support@wequitech.com — App: Wequi Guard.</p>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    const form = document.getElementById('delete-form');
+    const statusEl = document.getElementById('status');
+    const errorEl = document.getElementById('errors');
+    const copyBtn = document.getElementById('copy-btn');
+
+    function buildEmailBody(data) {
+      const lines = [
+        'Hello Wequitech Support,',
+        '',
+        'I am requesting deletion of my Wequi Guard account.',
+        `Sign-in email: ${data.email}`,
+        `Full name: ${data.name || 'Not provided'}`,
+        `Reason: ${data.reason || 'Not provided'}`,
+        `Additional notes: ${data.notes || 'None'}`,
+        `Local date/time: ${data.date}`,
+        'App: Wequi Guard',
+        '',
+        'Please delete my account and associated data and confirm when completed.',
+      ];
+      return lines.join('\n');
+    }
+
+    function validate() {
+      errorEl.textContent = '';
+      if (!form.reportValidity()) {
+        errorEl.textContent = 'Please fill the required fields and fix any highlighted inputs.';
+        return false;
+      }
+      if (!form.confirm.checked) {
+        errorEl.textContent = 'You must confirm you want to delete your account.';
+        return false;
+      }
+      return true;
+    }
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      statusEl.textContent = '';
+      errorEl.textContent = '';
+
+      if (!validate()) return;
+
+      const payload = {
+        email: form.email.value.trim(),
+        name: form.name.value.trim(),
+        reason: form.reason.value.trim(),
+        notes: form.notes.value.trim(),
+        date: new Date().toLocaleString(),
+      };
+
+      const body = buildEmailBody(payload);
+      const mailto = `mailto:support@wequitech.com?subject=${encodeURIComponent('Delete my Wequi Guard account')}&body=${encodeURIComponent(body)}`;
+
+      // Attempt to open email client
+      window.location.href = mailto;
+      statusEl.textContent = 'If your email app did not open, use “Copy email text” and paste it into an email to support@wequitech.com.';
+    });
+
+    copyBtn.addEventListener('click', () => {
+      statusEl.textContent = '';
+      errorEl.textContent = '';
+
+      if (!validate()) return;
+
+      const payload = {
+        email: form.email.value.trim(),
+        name: form.name.value.trim(),
+        reason: form.reason.value.trim(),
+        notes: form.notes.value.trim(),
+        date: new Date().toLocaleString(),
+      };
+
+      const body = buildEmailBody(payload);
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(body)
+          .then(() => {
+            statusEl.textContent = 'Email text copied. Paste into a new email to support@wequitech.com.';
+          })
+          .catch(() => {
+            errorEl.textContent = 'Could not copy automatically. Long-press or right-click to copy manually.';
+          });
+      } else {
+        errorEl.textContent = 'Clipboard not available. You can copy the text after the email opens.';
+      }
+    });
+  </script>
+</body>
+</html>

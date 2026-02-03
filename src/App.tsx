@@ -11,6 +11,7 @@ import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import DeleteAccount from "./pages/DeleteAccount";
 import AdminDashboard from "./pages/AdminDashboard";
 import Login from "./pages/Login";
 import ProtectedRoute from "./components/routing/ProtectedRoute";
@@ -48,6 +49,7 @@ const App = () => (
           <Route path="/faq" element={<FAQ />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/delete-account" element={<DeleteAccount />} />
           <Route
             path="/admin"
             element={
