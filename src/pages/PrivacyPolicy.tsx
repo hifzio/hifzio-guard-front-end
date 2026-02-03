@@ -17,7 +17,9 @@ const policyMeta = {
   lastUpdated: "January 31, 2026",
   supportEmail: "support@wequitech.com",
   websiteUrl: "https://wequitech.com",
-  developerName: "WequiGuard",
+  privacyPolicyUrl: "https://protect.wequitech.com/privacy-policy",
+  deleteAccountUrl: "https://protect.wequitech.com/delete-account",
+  developerName: "Wequi Guard",
   companyName: "Wequi Technologies",
 };
 
@@ -29,122 +31,184 @@ const policySections: Section[] = [
       <div className="space-y-4 text-muted-foreground">
         <p>
           This Privacy Policy explains how {policyMeta.developerName} (“we”, “our”, or “us”) handles information for the
-          WequiGuard mobile app, admin dashboard, and marketing site. By using our services, you agree to the collection
-          and use of information as described here.
+          Wequi Guard mobile app and related services. By using our services, you agree to the collection and use of
+          information as described here.
         </p>
         <p>
-          The app helps families stay safer online through DNS guidance, optional blocking, and device-level controls.
-          We collect only what is needed to run these features and support you.
+          Wequi Guard provides DNS setup guidance and optional protection features to support safer and more focused
+          browsing. We collect only what is necessary to operate the service, improve reliability, and support users.
         </p>
       </div>
     ),
   },
+
   {
     id: "information-collection",
     title: "Information We Collect and How We Use It",
     content: (
       <div className="space-y-5 text-muted-foreground">
-        <p>
-          WequiGuard gathers limited technical and usage data needed to run the service and
-          improve stability. This may include your IP address, the domain names your DNS resolves, timestamps, features
-          you use, device OS version, app version, and time spent in the app. We do not collect precise GPS location.
-        </p>
-        <p>
-          Account and support details you provide (email, authentication data, messages, optional attachments) are used
-          to operate your account, troubleshoot issues, and send important notices. We do not log browsing history or
-          store payment card numbers.
-        </p>
+        <div className="space-y-2">
+          <p className="font-semibold text-foreground">Account information</p>
+          <p>
+            If you sign in with Google, we may collect and store basic profile information such as your name, email
+            address, user ID (for example, a Firebase UID), and profile photo or photo URL (if you choose to provide it).
+            We use this for account setup, authentication, and account management.
+          </p>
+        </div>
+
+        <div className="space-y-2">
+          <p className="font-semibold text-foreground">App analytics and diagnostics</p>
+          <p>
+            We collect usage data (such as app interactions and features used) and diagnostics (such as crash logs and
+            performance signals) to improve app stability, fix bugs, and understand how features are used. This data may
+            include device and app identifiers, device OS version, app version, and approximate timestamps.
+          </p>
+        </div>
+
+        <div className="space-y-2">
+          <p className="font-semibold text-foreground">Network / DNS-related data</p>
+          <p>
+            When you use DNS-related features (for example, configuring or using a filtering resolver), certain network
+            data may be processed to provide filtering, security, and service operation. Depending on how you use the
+            service, this may include IP address and DNS query domains processed by the resolver. We do not collect
+            precise GPS location, and we do not collect the contents of the pages you visit (page content).
+          </p>
+          <p className="text-sm">
+            Note: DNS domains can reflect the sites a device attempts to access. We use DNS-related data only for
+            providing filtering/protection and service operation, and we do not use it to sell personal information.
+          </p>
+        </div>
+
+        <div className="space-y-2">
+          <p className="font-semibold text-foreground">Support communications</p>
+          <p>
+            If you contact support, we may collect your email address and the contents of your message (and any
+            attachments you choose to send) to respond and troubleshoot issues.
+          </p>
+        </div>
+
         <div className="rounded-lg border border-blue-100 bg-blue-50 p-4 text-sm text-blue-950">
           <p className="font-semibold text-blue-900">What we avoid</p>
           <ul className="list-disc space-y-1 pl-5">
-            <li>No collection of precise location, contacts, SMS, photos, microphone, or camera data.</li>
+            <li>No collection of precise GPS location.</li>
+            <li>No collection of contacts, SMS, microphone audio, or camera video.</li>
             <li>No sale or rental of personal information.</li>
           </ul>
         </div>
       </div>
     ),
   },
+
   {
-    id: "third-party-access",
-    title: "Third-Party Access and Services",
+    id: "accessibility",
+    title: "Accessibility Service (Optional)",
     content: (
       <div className="space-y-4 text-muted-foreground">
         <p>
-          We periodically send aggregated, anonymized diagnostics to third parties to help improve reliability and app
-          quality. Examples include Google Play Services, Firebase Analytics, Firebase Crashlytics, and Facebook
-          Analytics (subject to your platform settings).
+          Some optional protection features may require the Android Accessibility Service (BIND_ACCESSIBILITY_SERVICE),
+          such as detecting uninstall attempts and supporting distraction blocking (for example, blocking reels/short-video
+          sections).
         </p>
         <p>
-          Providers are contractually limited to using data only to deliver their services for us. We may disclose data
-          if required by law, to protect rights and safety, to investigate fraud or abuse, or as part of a merger or
-          acquisition.
+          Accessibility is used only to provide these protection features. We do not use Accessibility to read your
+          passwords, messages, or keystrokes. You can disable Accessibility at any time in your device settings.
         </p>
       </div>
     ),
   },
+
+  {
+    id: "third-party-access",
+    title: "Third-Party Services and Sharing",
+    content: (
+      <div className="space-y-4 text-muted-foreground">
+        <p>
+          We use service providers to help operate and improve the app. For example, we may use Firebase Authentication
+          (sign-in), Firebase Analytics (usage measurement), and Firebase Crashlytics (crash diagnostics). These providers
+          may process certain data on our behalf to deliver their services.
+        </p>
+        <p>
+          We may also disclose information if required by law, to protect rights and safety, to investigate fraud or
+          abuse, or as part of a merger, acquisition, or asset transfer.
+        </p>
+      </div>
+    ),
+  },
+
   {
     id: "data-retention",
     title: "Data Retention",
     content: (
       <div className="space-y-3 text-muted-foreground">
         <ul className="list-disc space-y-2 pl-5">
-          <li>User-provided data is kept while you use the service and for a reasonable period afterward.</li>
-          <li>Diagnostic and performance logs are retained only as long as needed for maintenance and security.</li>
-          <li>Legal requirements may oblige us to retain certain records longer.</li>
+          <li>Account data is kept while you maintain an account, and deleted upon verified deletion request.</li>
+          <li>Analytics and diagnostic data may be retained for a limited period to maintain and improve the service.</li>
+          <li>We may retain certain records longer if required by law or for security and fraud prevention.</li>
         </ul>
       </div>
     ),
   },
+
   {
     id: "account-deletion",
     title: "Account Deletion",
     content: (
       <div className="space-y-3 text-muted-foreground">
         <p>
-          Request deletion anytime via in‑app settings (where available) or by emailing {policyMeta.supportEmail} from
-          your account email. Account removal is irreversible.
+          You can request deletion of your account and associated data via our deletion page:{" "}
+          <a className="text-primary underline" href={policyMeta.deleteAccountUrl}>
+            {policyMeta.deleteAccountUrl}
+          </a>
+          . You may also email {policyMeta.supportEmail} from your account email address. Account removal is irreversible.
         </p>
-        <p>We target completion within 90 days of confirming your request</p>
+        <p>We aim to complete verified deletion requests within 30–90 days.</p>
       </div>
     ),
   },
+
   {
     id: "opt-out",
-    title: "Opt-Out Rights",
+    title: "Your Choices and Controls",
     content: (
       <div className="space-y-3 text-muted-foreground">
         <ul className="list-disc space-y-2 pl-5">
-          <li>Disable optional analytics (where available) or uninstall the app to stop future collection.</li>
-          <li>Revoke permissions such as Accessibility, Overlay, Usage Access in system settings.</li>
-          <li>If you set custom DNS for WequiGuard, revert those settings to disable network-level filtering.</li>
+          <li>You can uninstall the app to stop future collection from the app.</li>
+          <li>You can revoke optional permissions such as Accessibility in system settings.</li>
+          <li>
+            If the app provides an in-app toggle to disable analytics or diagnostics, you can use it (where available).
+          </li>
         </ul>
       </div>
     ),
   },
+
   {
     id: "security",
     title: "Security",
     content: (
       <div className="space-y-3 text-muted-foreground">
         <p>
-          We apply physical, electronic, and procedural safeguards to protect data in transit and at rest. No method is
-          perfectly secure, so we encourage strong passwords, device lock screens, and keeping your OS updated.
+          We apply reasonable physical, technical, and organizational safeguards to protect data in transit and at rest.
+          No method of transmission or storage is perfectly secure, so we encourage keeping your device updated and using
+          device-level security features.
         </p>
       </div>
     ),
   },
+
   {
     id: "changes",
     title: "Changes to This Policy",
     content: (
       <div className="space-y-3 text-muted-foreground">
         <p>
-          We may revise this notice as features or regulations change. Updates will refresh the “Last updated” date and
-          significant changes may be announced in‑app or via email before taking effect.
+          We may update this policy as features or regulations change. Updates will revise the “Last updated” date above.
+          Significant changes may be communicated in-app or via email.
         </p>
       </div>
     ),
   },
+
   {
     id: "contact",
     title: "Contact Us",
@@ -229,7 +293,7 @@ const PrivacyPolicy = () => {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">Privacy First</p>
             <h1 className="text-4xl font-bold md:text-5xl">Privacy Policy</h1>
             <p className="max-w-3xl text-lg text-white/80">
-              Learn how WequiGuard collects, uses, protects, and deletes information across our app and services.
+              Learn how Wequi Guard collects, uses, protects, and deletes information across our app and services.
             </p>
             <div className="flex flex-wrap gap-3 text-sm text-white/80">
               <span className="rounded-full bg-white/10 px-3 py-1 backdrop-blur">
@@ -296,7 +360,7 @@ const PrivacyPolicy = () => {
                 >
                   <div className="flex items-start gap-3">
                     <div className="text-sm font-semibold text-primary">{index + 1}.</div>
-                    <div className="space-y-4 w-full">
+                    <div className="w-full space-y-4">
                       <h2 className="text-2xl font-bold text-foreground">{section.title}</h2>
                       {section.content}
                     </div>
@@ -310,12 +374,20 @@ const PrivacyPolicy = () => {
                   <p className="text-primary-foreground/90">
                     Reach out and we will respond promptly with answers or next steps for any privacy request.
                   </p>
-                  <a
-                    className="inline-flex w-fit items-center justify-center rounded-md bg-white/15 px-4 py-2 text-sm font-semibold transition hover:-translate-y-0.5 hover:bg-white/25"
-                    href={`mailto:${policyMeta.supportEmail}`}
-                  >
-                    {policyMeta.supportEmail}
-                  </a>
+                  <div className="flex flex-wrap gap-3">
+                    <a
+                      className="inline-flex w-fit items-center justify-center rounded-md bg-white/15 px-4 py-2 text-sm font-semibold transition hover:-translate-y-0.5 hover:bg-white/25"
+                      href={`mailto:${policyMeta.supportEmail}`}
+                    >
+                      {policyMeta.supportEmail}
+                    </a>
+                    <a
+                      className="inline-flex w-fit items-center justify-center rounded-md bg-white/15 px-4 py-2 text-sm font-semibold transition hover:-translate-y-0.5 hover:bg-white/25"
+                      href={policyMeta.deleteAccountUrl}
+                    >
+                      Delete account page
+                    </a>
+                  </div>
                 </div>
               </Card>
             </div>
