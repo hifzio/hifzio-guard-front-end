@@ -92,10 +92,10 @@ const TermsOfService = () => (
               respond quickly.
             </p>
             <a
-              href="mailto:support@wequitech.com"
+              href="mailto:support@hifzio.com"
               className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-soft transition hover:-translate-y-0.5 hover:shadow-medium"
             >
-              support@wequitech.com
+              support@hifzio.com
             </a>
           </div>
         </Card>

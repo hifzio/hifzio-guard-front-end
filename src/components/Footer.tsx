@@ -1,6 +1,6 @@
 import { Shield, Twitter, Linkedin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
-import Logo from "@/assets/wequi-guard.png"; // adjust path
+import Logo from "@/assets/hifzio_guard_with_text.svg"; // adjust path
 
 
 const Footer = () => {
@@ -13,8 +13,8 @@ const Footer = () => {
               <span className="flex items-center space-x-2 text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 <img
                   src={Logo}
-                  alt="WequiGuard logo"
-                  className="h-[50px] w-auto"
+                  alt="Hifzio Guard logo"
+                  className="h-[50px] w-auto drop-shadow-sm"
                 />
               </span>
             </div>
@@ -23,7 +23,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://www.linkedin.com/company/wequi/"
+                href="https://www.linkedin.com/company/hifzio/"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -32,7 +32,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://www.linkedin.com/company/wequi/"
+                href="https://www.linkedin.com/company/hifzio/"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -41,7 +41,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="mailto:support@wequitech.com"
+                href="mailto:support@hifzio.com"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -105,16 +105,16 @@ const Footer = () => {
               Questions? We're here to help.
             </p>
             <a
-              href="mailto:support@wequitech.com"
+              href="mailto:support@hifzio.com"
               className="text-sm text-primary hover:underline inline-block mt-2"
             >
-              support@wequitech.com
+              support@hifzio.com
             </a>
           </div>
         </div>
 
         <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} WequiGuard. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Hifzio Guard. All rights reserved.</p>
         </div>
       </div>
     </footer>

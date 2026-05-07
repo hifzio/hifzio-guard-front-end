@@ -37,7 +37,7 @@ const AdminShell = ({ children, navItems }: AdminShellProps) => {
     <div className="flex min-h-screen bg-muted/30 text-foreground">
       <aside className="hidden w-72 flex-col border-r border-border/70 bg-background/95 px-6 py-10 lg:flex">
         <div className="space-y-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">WequiGuard</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">Hifzio Guard</p>
           <p className="text-2xl font-semibold tracking-tight">Admin Console</p>
           <p className="text-sm text-muted-foreground">Realtime network insights</p>
         </div>

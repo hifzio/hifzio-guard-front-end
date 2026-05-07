@@ -30,11 +30,11 @@ const FAQ = () => {
 
   return (
     <PageLayout>
-      <section className="py-20">
+      <section className="py-24 md:py-32 bg-gradient-feature">
         <div className="container max-w-4xl">
-          <div className="mb-12 space-y-4 text-center">
-            <h1 className="text-4xl font-bold md:text-5xl">Frequently Asked Questions</h1>
-            <p className="text-lg text-muted-foreground">Everything you need to know about WequiGuard.</p>
+          <div className="mb-16 space-y-4 text-center">
+            <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl text-foreground">Frequently Asked Questions</h1>
+            <p className="text-lg text-muted-foreground leading-relaxed">Everything you need to know about Hifzio Guard.</p>
           </div>
 
           <Card className="p-8">
@@ -50,12 +50,12 @@ const FAQ = () => {
             </Accordion>
           </Card>
 
-          <Card className="mt-12 border-2 border-primary/20 bg-gradient-to-r from-primary/5 to-secondary/5 p-8 text-center">
-            <h3 className="mb-4 text-2xl font-semibold">Still have questions?</h3>
-            <p className="mb-6 text-muted-foreground">
+          <Card className="mt-16 border-2 border-primary/10 bg-white/50 backdrop-blur-sm p-10 text-center shadow-medium rounded-3xl">
+            <h3 className="mb-4 text-2xl font-extrabold tracking-tight">Still have questions?</h3>
+            <p className="mb-6 text-muted-foreground leading-relaxed">
               We're here to help. Reach out to our support team and we'll respond as soon as possible.
             </p>
-            <a href={`mailto:${data.contactEmail}`} className="inline-block font-semibold text-primary hover:underline">
+            <a href={`mailto:${data.contactEmail}`} className="inline-block text-lg font-bold text-primary hover:underline transition-all">
               {data.contactEmail}
             </a>
           </Card>

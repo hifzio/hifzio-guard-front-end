@@ -15,9 +15,9 @@ type DeleteRequest = {
   date: string;
 };
 
-const SUPPORT_EMAIL = "support@wequitech.com";
-const SUBJECT = "Delete my Wequi Guard account";
-const APP_NAME = "Wequi Guard";
+const SUPPORT_EMAIL = "support@hifzio.com";
+const SUBJECT = "Delete my Hifzio Guard account";
+const APP_NAME = "Hifzio Guard";
 
 const reasonOptions = [
   "Switching to another service",
@@ -34,7 +34,7 @@ const DeleteAccount = () => {
   const [isCopying, setIsCopying] = useState(false);
 
   useEffect(() => {
-    document.title = "Wequi Guard — Delete Account Request";
+    document.title = "Hifzio Guard — Delete Account Request";
   }, []);
 
   const emailPattern = useMemo(() =>
@@ -98,7 +98,7 @@ const DeleteAccount = () => {
     const mailto = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(SUBJECT)}&body=${encodeURIComponent(body)}`;
 
     window.location.href = mailto;
-    setStatus("If your email app did not open, use the copy button and paste the text into a message to support@wequitech.com.");
+    setStatus("If your email app did not open, use the copy button and paste the text into a message to support@hifzio.com.");
   };
 
   const handleCopy = async () => {
@@ -120,7 +120,7 @@ const DeleteAccount = () => {
       } else {
         throw new Error("Clipboard API not available");
       }
-      setStatus("Email text copied. Paste into a new email to support@wequitech.com.");
+      setStatus("Email text copied. Paste into a new email to support@hifzio.com.");
     } catch (copyError) {
       console.error(copyError);
       setError("Could not copy automatically. Please select and copy the text manually after the mail app opens.");
@@ -136,7 +136,7 @@ const DeleteAccount = () => {
         <div className="relative z-10 mx-auto flex min-h-[calc(100vh-64px)] max-w-5xl flex-col gap-10 px-4 py-12 sm:px-6 lg:px-8">
           <div className="max-w-2xl space-y-4">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Account deletion</p>
-            <h1 className="text-3xl font-bold leading-tight sm:text-4xl">Wequi Guard — Delete Account Request</h1>
+            <h1 className="text-3xl font-bold leading-tight sm:text-4xl">Hifzio Guard — Delete Account Request</h1>
             <p className="text-base text-slate-200">
               Submit this form to generate an email to our support team. Entries stay in your browser only; no data is stored on this site.
             </p>

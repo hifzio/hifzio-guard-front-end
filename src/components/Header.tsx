@@ -2,7 +2,7 @@ import { Shield } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
-import Logo from "@/assets/wequi-guard.png"; // adjust path
+import Logo from "@/assets/hifzio_guard_with_text.svg"; // adjust path
 
 
 const Header = () => {
@@ -21,8 +21,8 @@ const Header = () => {
           <span className="flex items-center space-x-2 text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             <img
               src={Logo}
-              alt="WequiGuard logo"
-             className="h-[110px] w-auto"
+              alt="Hifzio Guard logo"
+             className="h-[60px] w-auto drop-shadow-sm"
             />
           </span>
         </Link>

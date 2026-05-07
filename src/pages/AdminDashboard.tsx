@@ -2099,7 +2099,7 @@ const HealthSection = () => {
           <SurfaceCard>
             <CardHeader>
               <CardTitle>Renewal Timeline</CardTitle>
-              <CardDescription>guard.wequitech.com:853</CardDescription>
+              <CardDescription>guard.hifzio.com:853</CardDescription>
             </CardHeader>
             <CardContent className="space-y-2">
               <p>Last renewal: {new Date(tls.last_renewal).toLocaleString()}</p>

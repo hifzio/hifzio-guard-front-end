@@ -14,15 +14,15 @@ export const dnsServers = {
 
 // DNS server name
 export const dnsServerNames = {
-  primary: "guard.wequitech.com",
+  primary: "guard.hifzio.com",
   secondary: "Coming soon",
 } as const;
 
 export const homeContent: HomeContent = {
   hero: {
-    title: "Free Family-Safe DNS That Blocks Adult Content & Online Threats",
+    title: "Keep Your Family Safe Online, Effortlessly",
     description:
-      "WequiGuard is a free, privacy-first DNS parental control filter that enforces SafeSearch and blocks pornography, gambling, malware, and scam sites across every device on your home Wi-Fi network.",
+      "Hifzio Guard is a free, privacy-first filter that blocks adult content, gambling, and online threats across your entire home Wi-Fi. Protect all your devices instantly—no apps required.",
     primaryCta: {
       label: "Start Free Protection",
       href: "/setup",
@@ -36,68 +36,89 @@ export const homeContent: HomeContent = {
     media: {
       type: "image",
       src: heroImage,
-      alt: "WequiGuard dashboard showing DNS filtering and blocked threats across home devices",
+      alt: "Hifzio Guard dashboard showing family-safe internet protection across home devices",
     },
   },
   socialProof: [
     {
       icon: "zap",
-      label: "5-minute DNS setup",
+      label: "Set up in 5 minutes",
       description:
-        "No apps to install—just swap your DNS servers once to protect the whole home network.",
+        "No apps to install. Just update one setting on your router to protect your whole home.",
     },
     {
       icon: "shieldCheck",
-      label: "Network-wide parental control",
+      label: "Total home protection",
       description:
-        "Phones, laptops, tablets, TVs, consoles, and guests all inherit the same family-safe DNS filtering.",
+        "Phones, tablets, TVs, and consoles all get the same family-safe protection automatically.",
     },
     {
       icon: "lock",
-      label: "Privacy-first, zero-log",
+      label: "100% private, zero logs",
       description:
-        "We don’t log or sell your browsing history. Your DNS data is used only to resolve and protect.",
+        "We never track, store, or sell your browsing history. Your family's privacy comes first.",
     },
   ],
   steps: [
     {
       icon: "shield",
-      title: "Pick your safety level",
+      title: "1. Choose your safety level",
       description:
-        "Choose a family-friendly DNS profile tuned to block adult content, gambling, and other harmful categories while keeping everyday sites accessible.",
+        "Select a family-friendly profile designed to block harmful sites while keeping the internet useful and fun.",
       accent: "primary",
     },
     {
       icon: "settings",
-      title: "Swap DNS in minutes",
+      title: "2. Update your connection",
       description:
-        "Follow our router or device walkthrough to point your home network to the WequiGuard DNS servers.",
+        "Follow our simple, step-by-step guide to connect your router or device to Hifzio Guard.",
       accent: "secondary",
     },
     {
       icon: "checkCircle",
-      title: "Browse with confidence",
+      title: "3. Browse with peace of mind",
       description:
-        "SafeSearch enforcement, adult content blocking, and malware protection switch on immediately for every device.",
+        "Adult content, scams, and malware are blocked instantly. Safe browsing begins right away.",
       accent: "accent",
     },
   ],
   finalCta: {
-    heading: "Ready to lock down your home internet?",
+    heading: "Ready for a safer internet?",
     subheading:
-      "Join families using WequiGuard as their free, family-safe DNS filter to block adult content, scams, and malware at the network level—no subscriptions or apps required.",
+      "Join thousands of families using Hifzio Guard to block harmful content and protect their homes. It's completely free, forever.",
     cta: {
-      label: "Set up WequiGuard",
+      label: "Set up Hifzio Guard",
       href: "/setup",
       variant: "secondary",
     },
   },
 };
 
+export const testimonials = [
+  {
+    quote: "I used to worry every time my kids borrowed my iPad. Since setting up Hifzio Guard on our router, I have total peace of mind.",
+    author: "Sarah Jenkins",
+    role: "Mother of two",
+    avatar: "https://i.pravatar.cc/150?u=sarah"
+  },
+  {
+    quote: "The best part is that there are no apps to install. I changed one setting, and now every device in the house is safe.",
+    author: "Michael T.",
+    role: "Parent & Teacher",
+    avatar: "https://i.pravatar.cc/150?u=michael"
+  },
+  {
+    quote: "Finally, a solution that respects our privacy. Free, fast, and doesn't log our browsing history.",
+    author: "Elena R.",
+    role: "Privacy Advocate",
+    avatar: "https://i.pravatar.cc/150?u=elena"
+  }
+];
+
 export const featureContent: FeatureContent = {
   title: "Powerful DNS parental control for clean, safe home internet",
   description:
-    "WequiGuard filters traffic at the DNS layer so every device on your Wi-Fi gets the same family-safe protection. Block adult and harmful websites, enforce SafeSearch, reduce malware and phishing risks, and keep your privacy with a fast, zero-log DNS resolver.",
+    "Hifzio Guard filters traffic at the DNS layer so every device on your Wi-Fi gets the same family-safe protection. Block adult and harmful websites, enforce SafeSearch, reduce malware and phishing risks, and keep your privacy with a fast, zero-log DNS resolver.",
   features: [
     {
       icon: "shieldBan",
@@ -131,21 +152,21 @@ export const featureContent: FeatureContent = {
       icon: "laptop",
       title: "Network-wide coverage",
       description:
-        "Set WequiGuard at the router once and every connected device—including guest and smart home devices—automatically benefits from the same DNS filtering.",
+        "Set Hifzio Guard at the router once and every connected device—including guest and smart home devices—automatically benefits from the same DNS filtering.",
       accent: "secondary",
     },
     {
       icon: "dollarSign",
       title: "Free forever for families",
       description:
-        "WequiGuard’s core family-safe DNS filter is free to use with no trials, no credit card, and no surprise upsells—because safe internet should be accessible.",
+        "Hifzio Guard’s core family-safe DNS filter is free to use with no trials, no credit card, and no surprise upsells—because safe internet should be accessible.",
       accent: "accent",
     },
   ],
   supportingStatement: {
     title: "Network-level protection without extra apps",
     description:
-      "Unlike browser extensions or per-device parental control apps, WequiGuard runs at the DNS layer. Once your router or devices use our DNS servers, every phone, laptop, TV, console, and smart device on that network automatically gets the same clean, family-safe browsing experience.",
+      "Unlike browser extensions or per-device parental control apps, Hifzio Guard runs at the DNS layer. Once your router or devices use our DNS servers, every phone, laptop, TV, console, and smart device on that network automatically gets the same clean, family-safe browsing experience.",
   },
 };
 
@@ -173,9 +194,9 @@ export const setupContent: SetupContent = {
                 "Look for DNS, Network, Internet, or WAN settings; some routers list DNS servers under Advanced or LAN sections.",
             },
             {
-              title: "Enter the WequiGuard DNS servers",
+              title: "Enter the Hifzio Guard DNS servers",
               description:
-                "Replace any existing DNS entries with the WequiGuard family-safe DNS addresses below. If Secondary shows \"Coming soon,\" you can leave it blank for now.",
+                "Replace any existing DNS entries with the Hifzio Guard family-safe DNS addresses below. If Secondary shows \"Coming soon,\" you can leave it blank for now.",
               callouts: [
                 { label: "Primary DNS", value: dnsServers.primary },
                 { label: "Secondary DNS", value: dnsServers.secondary },
@@ -184,7 +205,7 @@ export const setupContent: SetupContent = {
             {
               title: "Save and restart",
               description:
-                "Apply the changes and restart the router if prompted. All devices on your Wi-Fi will now use WequiGuard’s filtered DNS.",
+                "Apply the changes and restart the router if prompted. All devices on your Wi-Fi will now use Hifzio Guard’s filtered DNS.",
             },
           ],
         },
@@ -211,7 +232,7 @@ export const setupContent: SetupContent = {
             {
               title: "Use the DNS servers below",
               description:
-                'Select "Use the following DNS server addresses" and enter the WequiGuard DNS values for IPv4.',
+                'Select "Use the following DNS server addresses" and enter the Hifzio Guard DNS values for IPv4.',
               callouts: [
                 { label: "Preferred DNS", value: dnsServers.primary },
                 { label: "Alternate DNS", value: dnsServers.secondary },
@@ -247,7 +268,7 @@ export const setupContent: SetupContent = {
             {
               title: "Update the DNS tab",
               description:
-                "Add the WequiGuard DNS addresses in the DNS tab, then press OK to confirm.",
+                "Add the Hifzio Guard DNS addresses in the DNS tab, then press OK to confirm.",
               callouts: [
                 { label: "Primary DNS", value: dnsServers.primary },
                 { label: "Secondary DNS", value: dnsServers.secondary },
@@ -256,7 +277,7 @@ export const setupContent: SetupContent = {
             {
               title: "Apply changes",
               description:
-                "Click Apply to save. Your Mac’s traffic now goes through WequiGuard’s family-safe DNS filter.",
+                "Click Apply to save. Your Mac’s traffic now goes through Hifzio Guard’s family-safe DNS filter.",
             },
           ],
         },
@@ -267,7 +288,7 @@ export const setupContent: SetupContent = {
       name: "Mobile",
       icon: "smartphone",
       description:
-        "Protect iOS and Android phones or tablets individually with WequiGuard DNS.",
+        "Protect iOS and Android phones or tablets individually with Hifzio Guard DNS.",
       sections: [
         {
           heading: "iOS / iPadOS",
@@ -282,9 +303,9 @@ export const setupContent: SetupContent = {
                 "Tap Configure DNS → Manual, remove old servers, and add the new ones.",
             },
             {
-              title: "Add WequiGuard DNS",
+              title: "Add Hifzio Guard DNS",
               description:
-                "Add both WequiGuard DNS entries below, then tap Save to apply the change.",
+                "Add both Hifzio Guard DNS entries below, then tap Save to apply the change.",
               callouts: [
                 { label: "DNS 1", value: dnsServerNames.primary },
                 { label: "DNS 2", value: dnsServerNames.secondary },
@@ -308,7 +329,7 @@ export const setupContent: SetupContent = {
             {
               title: "Enter DNS addresses",
               description:
-                "Fill DNS 1 and DNS 2 with the WequiGuard DNS values below and save the configuration.",
+                "Fill DNS 1 and DNS 2 with the Hifzio Guard DNS values below and save the configuration.",
               callouts: [
                 { label: "DNS 1", value: dnsServerNames.primary },
                 { label: "DNS 2", value: dnsServerNames.secondary },
@@ -333,7 +354,7 @@ export const setupContent: SetupContent = {
     {
       title: "How do I verify it's working?",
       description:
-        "Visit a site with adult content or use a DNS test page—WequiGuard should block it. You can also confirm your device’s DNS points to the WequiGuard servers.",
+        "Visit a site with adult content or use a DNS test page—Hifzio Guard should block it. You can also confirm your device’s DNS points to the Hifzio Guard servers.",
     },
   ],
 };
@@ -341,14 +362,14 @@ export const setupContent: SetupContent = {
 export const faqContent: FaqContent = {
   faqs: [
     {
-      question: "Is WequiGuard really free?",
+      question: "Is Hifzio Guard really free?",
       answer:
-        "Yes. WequiGuard’s core family-safe DNS filtering is completely free to use with no upsells, trials, or hidden tiers. Our goal is to make clean, safe internet accessible to every household.",
+        "Yes. Hifzio Guard’s core family-safe DNS filtering is completely free to use with no upsells, trials, or hidden tiers. Our goal is to make clean, safe internet accessible to every household.",
     },
     {
-      question: "How does WequiGuard work?",
+      question: "How does Hifzio Guard work?",
       answer:
-        "WequiGuard uses DNS filtering. When a device on your network requests a website, the domain is checked against our curated safety index. Harmful categories like adult content, gambling, and malware are blocked at the DNS layer before the page can load.",
+        "Hifzio Guard uses DNS filtering. When a device on your network requests a website, the domain is checked against our curated safety index. Harmful categories like adult content, gambling, and malware are blocked at the DNS layer before the page can load.",
     },
     {
       question: "Will it slow down my internet?",
@@ -358,7 +379,7 @@ export const faqContent: FaqContent = {
     {
       question: "Can I whitelist or blacklist specific websites?",
       answer:
-        "Today, WequiGuard focuses on simple, category-based protection that works out of the box. Custom allow/deny lists and per-profile policies are on our roadmap for future premium features.",
+        "Today, Hifzio Guard focuses on simple, category-based protection that works out of the box. Custom allow/deny lists and per-profile policies are on our roadmap for future premium features.",
     },
     {
       question: "Do you log my browsing data?",
@@ -381,17 +402,17 @@ export const faqContent: FaqContent = {
         "We focus on blocking adult content, pornography, gambling, malware, phishing, and violent or extremist material. SafeSearch is also enforced on major search engines where technically possible.",
     },
     {
-      question: "Can I use WequiGuard at work or school?",
+      question: "Can I use Hifzio Guard at work or school?",
       answer:
         "Yes, as long as you’re allowed to manage DNS settings. Always coordinate with your IT or network administrator before changing DNS on company or school networks.",
     },
     {
-      question: "Is WequiGuard a replacement for parental control software?",
+      question: "Is Hifzio Guard a replacement for parental control software?",
       answer:
-        "WequiGuard is a strong, DNS-level first line of defense that keeps harmful sites off your network. Many families combine DNS filtering with device-level parental control apps to manage screen time, apps, and social media for more complete protection.",
+        "Hifzio Guard is a strong, DNS-level first line of defense that keeps harmful sites off your network. Many families combine DNS filtering with device-level parental control apps to manage screen time, apps, and social media for more complete protection.",
     },
   ],
-  contactEmail: "support@wequitech.com",
+  contactEmail: "support@hifzio.com",
 };
 
 export const adminDashboardData: AdminDashboardData = {
@@ -407,7 +428,7 @@ export const adminDashboardData: AdminDashboardData = {
     cacheHitRatio: { tenMinutes: 82, oneHour: 79 },
     handshake: { successRate: 99.2, window: "10m" },
     tls: {
-      domain: "guard.wequitech.com",
+      domain: "guard.hifzio.com",
       daysRemaining: 42,
       expiresOn: "2025-05-02T00:00:00Z",
       status: "ok",
@@ -527,7 +548,7 @@ export const adminDashboardData: AdminDashboardData = {
       {
         id: "user-1",
         name: "Lena McConnell",
-        email: "lena@wequi.family",
+        email: "lena@hifzio.family",
         devices: 5,
         policy: "Family-Strict",
         lastActivity: "2m ago",
@@ -536,7 +557,7 @@ export const adminDashboardData: AdminDashboardData = {
       {
         id: "user-2",
         name: "Carlos Rivera",
-        email: "carlos@wequi.family",
+        email: "carlos@hifzio.family",
         devices: 3,
         policy: "Balanced",
         lastActivity: "14m ago",
@@ -545,7 +566,7 @@ export const adminDashboardData: AdminDashboardData = {
       {
         id: "user-3",
         name: "Priya Kapoor",
-        email: "priya@wequi.family",
+        email: "priya@hifzio.family",
         devices: 4,
         policy: "Homework",
         lastActivity: "1h ago",
@@ -698,8 +719,8 @@ export const adminDashboardData: AdminDashboardData = {
       },
     ],
     tls: {
-      commonName: "guard.wequitech.com",
-      sans: ["guard.wequitech.com", "*.guard.wequitech.com"],
+      commonName: "guard.hifzio.com",
+      sans: ["guard.hifzio.com", "*.guard.hifzio.com"],
       notBefore: "2024-11-02T00:00:00Z",
       notAfter: "2025-05-02T00:00:00Z",
       daysRemaining: 42,
@@ -761,7 +782,7 @@ export const adminDashboardData: AdminDashboardData = {
 
 export const seoMetadata = {
   home: {
-    title: "WequiGuard | Free Family-Safe DNS Filter for Home Wi-Fi",
+    title: "Hifzio Guard | Free Family-Safe DNS Filter for Home Wi-Fi",
     description:
       "Free, zero-log DNS parental control that blocks adult content, gambling, malware, and scams for every device on your home Wi-Fi. Enforce SafeSearch in minutes.",
     keywords: [
@@ -775,9 +796,9 @@ export const seoMetadata = {
     ],
   },
   features: {
-    title: "WequiGuard Features | DNS Parental Control & SafeSearch",
+    title: "Hifzio Guard Features | DNS Parental Control & SafeSearch",
     description:
-      "Explore WequiGuard’s DNS filtering features: adult and gambling blocking, SafeSearch enforcement, malware and phishing protection, and privacy-first zero-log DNS.",
+      "Explore Hifzio Guard’s DNS filtering features: adult and gambling blocking, SafeSearch enforcement, malware and phishing protection, and privacy-first zero-log DNS.",
     keywords: [
       "SafeSearch enforcement",
       "DNS parental control features",
@@ -788,24 +809,24 @@ export const seoMetadata = {
     ],
   },
   setup: {
-    title: "WequiGuard Setup Guide | Router & Device DNS Instructions",
+    title: "Hifzio Guard Setup Guide | Router & Device DNS Instructions",
     description:
-      "Step-by-step DNS setup guides for routers, Windows, macOS, iOS, and Android so you can point your devices to WequiGuard and enable family-safe filtering in minutes.",
+      "Step-by-step DNS setup guides for routers, Windows, macOS, iOS, and Android so you can point your devices to Hifzio Guard and enable family-safe filtering in minutes.",
     keywords: [
       "DNS setup guide",
       "router DNS instructions",
-      "WequiGuard setup",
+      "Hifzio Guard setup",
       "family DNS filter install",
       "change DNS router",
       "configure DNS Windows",
     ],
   },
   faq: {
-    title: "WequiGuard FAQ | Family-Safe DNS Help & Support",
+    title: "Hifzio Guard FAQ | Family-Safe DNS Help & Support",
     description:
-      "Answers to common questions about how WequiGuard blocks adult content, enforces SafeSearch, protects privacy, and keeps home internet clean for kids and families.",
+      "Answers to common questions about how Hifzio Guard blocks adult content, enforces SafeSearch, protects privacy, and keeps home internet clean for kids and families.",
     keywords: [
-      "WequiGuard FAQ",
+      "Hifzio Guard FAQ",
       "family-safe DNS questions",
       "DNS filter support",
       "safe browsing for kids",
@@ -813,11 +834,11 @@ export const seoMetadata = {
     ],
   },
   admin: {
-    title: "WequiGuard Admin Dashboard | Live DNS Protection & Analytics",
+    title: "Hifzio Guard Admin Dashboard | Live DNS Protection & Analytics",
     description:
-      "Monitor DNS traffic, SafeSearch rewrites, block rates, cache health, and upstream performance in the WequiGuard admin dashboard.",
+      "Monitor DNS traffic, SafeSearch rewrites, block rates, cache health, and upstream performance in the Hifzio Guard admin dashboard.",
     keywords: [
-      "WequiGuard admin dashboard",
+      "Hifzio Guard admin dashboard",
       "DNS analytics",
       "SafeSearch monitoring",
       "DNS protection dashboard",
@@ -825,44 +846,44 @@ export const seoMetadata = {
     ],
   },
   login: {
-    title: "WequiGuard Login | Access Your Family DNS Protection",
+    title: "Hifzio Guard Login | Access Your Family DNS Protection",
     description:
-      "Sign in to manage your WequiGuard DNS protection, parental control policies, and connected devices.",
+      "Sign in to manage your Hifzio Guard DNS protection, parental control policies, and connected devices.",
     keywords: [
-      "WequiGuard login",
+      "Hifzio Guard login",
       "family DNS login",
       "DNS filter account",
       "parental control DNS account",
     ],
   },
   profile: {
-    title: "WequiGuard Profile | Manage Your DNS Account",
+    title: "Hifzio Guard Profile | Manage Your DNS Account",
     description:
-      "View and update your WequiGuard account details, DNS profiles, and notification preferences.",
+      "View and update your Hifzio Guard account details, DNS profiles, and notification preferences.",
     keywords: [
-      "WequiGuard profile",
+      "Hifzio Guard profile",
       "manage DNS account",
       "DNS filter settings",
       "account settings",
     ],
   },
   privacyPolicy: {
-    title: "WequiGuard Privacy Policy | Zero-Log DNS & Data Protection",
+    title: "Hifzio Guard Privacy Policy | Zero-Log DNS & Data Protection",
     description:
-      "Learn how WequiGuard handles data with a strict zero-log, privacy-first approach for family-safe DNS filtering.",
+      "Learn how Hifzio Guard handles data with a strict zero-log, privacy-first approach for family-safe DNS filtering.",
     keywords: [
-      "WequiGuard privacy policy",
+      "Hifzio Guard privacy policy",
       "zero log DNS privacy",
       "family DNS privacy",
       "DNS data protection",
     ],
   },
   termsOfService: {
-    title: "WequiGuard Terms of Service | Usage & Acceptable Use Policy",
+    title: "Hifzio Guard Terms of Service | Usage & Acceptable Use Policy",
     description:
-      "Review the terms of service and acceptable use policy for using the WequiGuard family-safe DNS filter.",
+      "Review the terms of service and acceptable use policy for using the Hifzio Guard family-safe DNS filter.",
     keywords: [
-      "WequiGuard terms of service",
+      "Hifzio Guard terms of service",
       "DNS filter terms",
       "acceptable use policy",
       "DNS service agreement",

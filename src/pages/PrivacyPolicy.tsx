@@ -15,11 +15,11 @@ type Section = {
 const policyMeta = {
   effectiveDate: "December 4, 2024",
   lastUpdated: "January 31, 2026",
-  supportEmail: "support@wequitech.com",
-  websiteUrl: "https://wequitech.com",
-  privacyPolicyUrl: "https://protect.wequitech.com/privacy-policy",
-  deleteAccountUrl: "https://protect.wequitech.com/delete-account",
-  developerName: "Wequi Guard",
+  supportEmail: "support@hifzio.com",
+  websiteUrl: "https://hifzio.com",
+  privacyPolicyUrl: "https://guard.hifzio.com/privacy-policy",
+  deleteAccountUrl: "https://guard.hifzio.com/delete-account",
+  developerName: "Hifzio Guard",
   companyName: "Wequi Technologies",
 };
 
@@ -31,11 +31,11 @@ const policySections: Section[] = [
       <div className="space-y-4 text-muted-foreground">
         <p>
           This Privacy Policy explains how {policyMeta.developerName} (“we”, “our”, or “us”) handles information for the
-          Wequi Guard mobile app and related services. By using our services, you agree to the collection and use of
+          Hifzio Guard mobile app and related services. By using our services, you agree to the collection and use of
           information as described here.
         </p>
         <p>
-          Wequi Guard provides DNS setup guidance and optional protection features to support safer and more focused
+          Hifzio Guard provides DNS setup guidance and optional protection features to support safer and more focused
           browsing. We collect only what is necessary to operate the service, improve reliability, and support users.
         </p>
       </div>
@@ -293,7 +293,7 @@ const PrivacyPolicy = () => {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">Privacy First</p>
             <h1 className="text-4xl font-bold md:text-5xl">Privacy Policy</h1>
             <p className="max-w-3xl text-lg text-white/80">
-              Learn how Wequi Guard collects, uses, protects, and deletes information across our app and services.
+              Learn how Hifzio Guard collects, uses, protects, and deletes information across our app and services.
             </p>
             <div className="flex flex-wrap gap-3 text-sm text-white/80">
               <span className="rounded-full bg-white/10 px-3 py-1 backdrop-blur">

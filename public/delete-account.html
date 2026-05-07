@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wequi Guard — Delete Account Request</title>
+  <title>Hifzio Guard — Delete Account Request</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -190,8 +190,8 @@
   <main class="shell">
     <section class="card" aria-labelledby="page-title">
       <header>
-        <h1 id="page-title">Wequi Guard — Delete Account Request</h1>
-        <p class="lead">Submit this form to request deletion of your Wequi Guard account. We’ll prompt your email app to send the request to our support team. Nothing you enter here is stored on this site.</p>
+        <h1 id="page-title">Hifzio Guard — Delete Account Request</h1>
+        <p class="lead">Submit this form to request deletion of your Hifzio Guard account. We’ll prompt your email app to send the request to our support team. Nothing you enter here is stored on this site.</p>
       </header>
 
       <form id="delete-form" novalidate>
@@ -240,11 +240,11 @@
       <section class="compliance" aria-label="Data handling details">
         <strong>What happens next</strong>
         <ul class="list">
-          <li>We delete your Wequi Guard account (Firebase Auth) and stored profile data (email, name, photo) plus any user-linked database records.</li>
+          <li>We delete your Hifzio Guard account (Firebase Auth) and stored profile data (email, name, photo) plus any user-linked database records.</li>
           <li>Aggregated analytics or crash-report data may remain in system logs for reliability and security; these are not tied to your active account.</li>
           <li>Processing time: requests are handled within 90 days. You’ll get a confirmation email when complete.</li>
         </ul>
-        <p style="margin-top:10px;">Developer: Wequitech — Contact: support@wequitech.com — App: Wequi Guard.</p>
+        <p style="margin-top:10px;">Developer: Wequitech — Contact: support@hifzio.com — App: Hifzio Guard.</p>
       </section>
     </section>
   </main>
@@ -259,13 +259,13 @@
       const lines = [
         'Hello Wequitech Support,',
         '',
-        'I am requesting deletion of my Wequi Guard account.',
+        'I am requesting deletion of my Hifzio Guard account.',
         `Sign-in email: ${data.email}`,
         `Full name: ${data.name || 'Not provided'}`,
         `Reason: ${data.reason || 'Not provided'}`,
         `Additional notes: ${data.notes || 'None'}`,
         `Local date/time: ${data.date}`,
-        'App: Wequi Guard',
+        'App: Hifzio Guard',
         '',
         'Please delete my account and associated data and confirm when completed.',
       ];
@@ -301,11 +301,11 @@
       };
 
       const body = buildEmailBody(payload);
-      const mailto = `mailto:support@wequitech.com?subject=${encodeURIComponent('Delete my Wequi Guard account')}&body=${encodeURIComponent(body)}`;
+      const mailto = `mailto:support@hifzio.com?subject=${encodeURIComponent('Delete my Hifzio Guard account')}&body=${encodeURIComponent(body)}`;
 
       // Attempt to open email client
       window.location.href = mailto;
-      statusEl.textContent = 'If your email app did not open, use “Copy email text” and paste it into an email to support@wequitech.com.';
+      statusEl.textContent = 'If your email app did not open, use “Copy email text” and paste it into an email to support@hifzio.com.';
     });
 
     copyBtn.addEventListener('click', () => {
@@ -327,7 +327,7 @@
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(body)
           .then(() => {
-            statusEl.textContent = 'Email text copied. Paste into a new email to support@wequitech.com.';
+            statusEl.textContent = 'Email text copied. Paste into a new email to support@hifzio.com.';
           })
           .catch(() => {
             errorEl.textContent = 'Could not copy automatically. Long-press or right-click to copy manually.';

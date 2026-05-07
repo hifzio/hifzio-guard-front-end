@@ -47,7 +47,7 @@ const Login = () => {
       <div className="flex flex-1 items-center justify-center px-6 py-12">
         <Card className="w-full max-w-md border-slate-200 shadow-lg">
           <CardHeader className="space-y-2 text-center">
-            <CardTitle className="text-2xl font-semibold text-slate-900">Sign in to WequiGuard</CardTitle>
+            <CardTitle className="text-2xl font-semibold text-slate-900">Sign in to Hifzio Guard</CardTitle>
             <CardDescription>Monitor your network and manage policies securely.</CardDescription>
           </CardHeader>
           <CardContent>

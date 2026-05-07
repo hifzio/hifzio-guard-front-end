@@ -39,23 +39,23 @@ const Setup = () => {
 
   return (
     <PageLayout>
-      <section className="py-20">
+      <section className="py-24 md:py-32 bg-gradient-feature">
         <div className="container max-w-5xl">
-          <div className="mb-12 space-y-4 text-center">
-            <h1 className="text-4xl font-bold md:text-5xl">Get Protected in 5 Minutes</h1>
-            <p className="text-lg text-muted-foreground">Choose your device or router below for step-by-step instructions.</p>
+          <div className="mb-16 space-y-4 text-center">
+            <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl text-foreground">Get Protected in 5 Minutes</h1>
+            <p className="text-lg text-muted-foreground leading-relaxed">Choose your device or router below for step-by-step instructions.</p>
           </div>
 
-          <Card className="mb-12 border-2 border-primary/20 bg-gradient-to-r from-primary/5 to-secondary/5 p-8">
-            <h3 className="mb-4 text-center text-xl font-semibold">WequiGuard DNS Servers</h3>
+          <Card className="mb-16 border-2 border-primary/10 bg-white/50 backdrop-blur-sm p-10 shadow-medium rounded-3xl">
+            <h3 className="mb-8 text-center text-2xl font-extrabold tracking-tight">Hifzio Guard DNS Servers</h3>
             <div className="grid gap-6 md:grid-cols-2">
               {[
                 { label: "Primary DNS", value: dnsServers.primary, accent: "text-primary" },
                 { label: "Secondary DNS", value: dnsServers.secondary, accent: "text-secondary" },
               ].map((server) => (
                 <div key={server.label} className="text-center">
-                  <p className="mb-2 text-sm text-muted-foreground">{server.label}</p>
-                  <p className={`font-mono text-3xl font-bold ${server.accent}`}>{server.value}</p>
+                  <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-muted-foreground">{server.label}</p>
+                  <p className={`font-mono text-3xl md:text-5xl font-extrabold tracking-tighter ${server.accent}`}>{server.value}</p>
                 </div>
               ))}
             </div>
