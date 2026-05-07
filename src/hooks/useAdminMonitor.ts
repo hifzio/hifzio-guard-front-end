@@ -141,6 +141,7 @@ export const useMonitorCacheMetrics = (window: MonitorWindow) =>
   useQuery({
     queryKey: ["admin", "cache", window],
     queryFn: () => adminMonitorService.getCacheMetrics(window),
+  
   });
 
 export const useMonitorAlerts = () =>

@@ -1,6 +1,5 @@
 import PageLayout from "@/components/layout/PageLayout";
 import { ContentError, ContentLoading } from "@/components/ContentState";
-import { Card } from "@/components/ui/card";
 import {
   Accordion,
   AccordionContent,
@@ -8,57 +7,76 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useFaqContent } from "@/hooks/useContentData";
+import { Mail } from "lucide-react";
 
 const FAQ = () => {
   const { data, isPending, isError, refetch } = useFaqContent();
 
-  if (isPending) {
-    return (
-      <PageLayout>
-        <ContentLoading message="Loading FAQs..." />
-      </PageLayout>
-    );
-  }
-
-  if (isError || !data) {
-    return (
-      <PageLayout>
-        <ContentError onRetry={() => refetch()} />
-      </PageLayout>
-    );
-  }
+  if (isPending) return <PageLayout><ContentLoading message="Loading FAQs..." /></PageLayout>;
+  if (isError || !data) return <PageLayout><ContentError onRetry={() => refetch()} /></PageLayout>;
 
   return (
     <PageLayout>
-      <section className="py-24 md:py-32 bg-gradient-feature">
-        <div className="container max-w-4xl">
-          <div className="mb-16 space-y-4 text-center">
-            <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl text-foreground">Frequently Asked Questions</h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">Everything you need to know about Hifzio Guard.</p>
-          </div>
+      {/* ─── PAGE HEADER ────────────────────────────────── */}
+      <section className="relative bg-white border-b border-border/50">
+        <div className="pointer-events-none absolute inset-0 bg-hero-gradient" />
+        <div className="container relative z-10 py-16 md:py-20 text-center">
+          <p className="section-label mb-3">FAQ</p>
+          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-4">
+            Frequently asked questions
+          </h1>
+          <p className="text-base text-muted-foreground max-w-xl mx-auto">
+            Everything you need to know about Hifzio Guard. Can't find your answer?{" "}
+            <a href={`mailto:${data.contactEmail}`} className="text-primary underline underline-offset-2 hover:text-primary-dark transition-colors">
+              Contact us.
+            </a>
+          </p>
+        </div>
+      </section>
 
-          <Card className="p-8">
+      {/* ─── ACCORDION ──────────────────────────────────── */}
+      <section className="py-14 md:py-20 bg-white">
+        <div className="container max-w-3xl">
+          <div className="card-base overflow-hidden divide-y divide-border/60">
             <Accordion type="single" collapsible className="w-full">
-              {data.faqs.map((faq, index) => (
-                <AccordionItem key={faq.question} value={`item-${index}`}>
-                  <AccordionTrigger className="text-left text-lg font-semibold hover:text-primary">
+              {data.faqs.map((faq, idx) => (
+                <AccordionItem
+                  key={faq.question}
+                  value={`item-${idx}`}
+                  className="border-0 px-6 first:pt-2 last:pb-2"
+                >
+                  <AccordionTrigger className="text-sm font-semibold text-foreground hover:text-primary hover:no-underline py-5 text-left">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="leading-relaxed text-muted-foreground">{faq.answer}</AccordionContent>
+                  <AccordionContent className="text-sm text-muted-foreground leading-relaxed pb-5">
+                    {faq.answer}
+                  </AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
-          </Card>
+          </div>
+        </div>
+      </section>
 
-          <Card className="mt-16 border-2 border-primary/10 bg-white/50 backdrop-blur-sm p-10 text-center shadow-medium rounded-3xl">
-            <h3 className="mb-4 text-2xl font-extrabold tracking-tight">Still have questions?</h3>
-            <p className="mb-6 text-muted-foreground leading-relaxed">
-              We're here to help. Reach out to our support team and we'll respond as soon as possible.
+      {/* ─── CONTACT CARD ───────────────────────────────── */}
+      <section className="pb-16 md:pb-24 bg-white">
+        <div className="container max-w-3xl">
+          <div className="rounded-2xl border border-border/60 bg-muted/30 p-8 text-center">
+            <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary mb-4">
+              <Mail className="h-6 w-6" />
+            </div>
+            <h3 className="text-lg font-semibold text-foreground mb-2">Still have questions?</h3>
+            <p className="text-sm text-muted-foreground mb-5 max-w-sm mx-auto leading-relaxed">
+              Our team is here to help. We typically respond within one business day.
             </p>
-            <a href={`mailto:${data.contactEmail}`} className="inline-block text-lg font-bold text-primary hover:underline transition-all">
-              {data.contactEmail}
+            <a
+              href={`mailto:${data.contactEmail}`}
+              className="inline-flex items-center gap-2 h-10 px-6 rounded-lg bg-primary text-white text-sm font-semibold hover:bg-primary-dark shadow-sm shadow-primary/20 transition-all"
+            >
+              <Mail className="h-4 w-4" />
+              Email Support
             </a>
-          </Card>
+          </div>
         </div>
       </section>
     </PageLayout>

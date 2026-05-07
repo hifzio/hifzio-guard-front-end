@@ -1,120 +1,98 @@
-import { Shield, Twitter, Linkedin, Mail } from "lucide-react";
+import { Twitter, Linkedin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
-import Logo from "@/assets/hifzio_guard_with_text.svg"; // adjust path
+import Logo from "@/assets/hifzio_guard_with_text.svg";
 
+const PRODUCT_LINKS = [
+  { label: "Home", path: "/" },
+  { label: "Features", path: "/features" },
+  { label: "Setup Guide", path: "/setup" },
+  { label: "FAQ", path: "/faq" },
+];
+
+const LEGAL_LINKS = [
+  { label: "Privacy Policy", path: "/privacy-policy" },
+  { label: "Terms of Service", path: "/terms-of-service" },
+];
+
+const SOCIALS = [
+  { icon: Twitter, href: "https://twitter.com/hifzio", label: "Twitter" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/hifzio/", label: "LinkedIn" },
+  { icon: Mail, href: "mailto:support@hifzio.com", label: "Email" },
+];
 
 const Footer = () => {
   return (
-    <footer className="border-t bg-muted/30 mt-20">
-      <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <span className="flex items-center space-x-2 text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                <img
-                  src={Logo}
-                  alt="Hifzio Guard logo"
-                  className="h-[50px] w-auto drop-shadow-sm"
-                />
-              </span>
-            </div>
-            <p className="text-sm text-muted-foreground">
-              Shielding Your Digital World. Effortlessly.
+    <footer className="border-t border-border/50 bg-muted/20">
+      <div className="container py-12 md:py-16">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
+          {/* Brand */}
+          <div className="md:col-span-5 space-y-4">
+            <Link to="/" className="inline-block hover:opacity-80 transition-opacity">
+              <img src={Logo} alt="Hifzio Guard" className="h-8 w-auto" />
+            </Link>
+            <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
+              Free, privacy-first DNS filtering that keeps your family safe online — no apps, no subscriptions.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="https://www.linkedin.com/company/hifzio/"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
-
-              <a
-                href="https://www.linkedin.com/company/hifzio/"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-
-              <a
-                href="mailto:support@hifzio.com"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
-                <Mail className="h-5 w-5" />
-              </a>
+            <div className="flex gap-2">
+              {SOCIALS.map(({ icon: Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label={label}
+                  className="flex h-9 w-9 items-center justify-center rounded-lg bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary transition-all"
+                >
+                  <Icon className="h-4 w-4" />
+                </a>
+              ))}
             </div>
-
           </div>
 
-          <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link to="/features" className="text-muted-foreground hover:text-primary transition-colors">
-                  Features
-                </Link>
-              </li>
-              <li>
-                <Link to="/setup" className="text-muted-foreground hover:text-primary transition-colors">
-                  Setup Guide
-                </Link>
-              </li>
-              <li>
-                <Link to="/faq" className="text-muted-foreground hover:text-primary transition-colors">
-                  FAQ
-                </Link>
-              </li>
+          {/* Product links */}
+          <div className="md:col-span-3 space-y-4">
+            <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Product</p>
+            <ul className="space-y-3">
+              {PRODUCT_LINKS.map(({ label, path }) => (
+                <li key={path}>
+                  <Link to={path} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          <div>
-            <h3 className="font-semibold mb-4">Legal</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  to="/privacy-policy"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/terms-of-service"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Terms of Service
-                </Link>
-              </li>
+          {/* Legal links */}
+          <div className="md:col-span-2 space-y-4">
+            <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Legal</p>
+            <ul className="space-y-3">
+              {LEGAL_LINKS.map(({ label, path }) => (
+                <li key={path}>
+                  <Link to={path} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          <div>
-            <h3 className="font-semibold mb-4">Contact</h3>
-            <p className="text-sm text-muted-foreground">
-              Questions? We're here to help.
-            </p>
-            <a
-              href="mailto:support@hifzio.com"
-              className="text-sm text-primary hover:underline inline-block mt-2"
+          {/* CTA */}
+          <div className="md:col-span-2 space-y-4">
+            <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Protect Your Family</p>
+            <Link
+              to="/setup"
+              className="inline-flex h-9 items-center justify-center rounded-lg bg-primary px-4 text-sm font-semibold text-white hover:bg-primary-dark shadow-sm shadow-primary/20 transition-all"
             >
-              support@hifzio.com
-            </a>
+              Get Started Free
+            </Link>
           </div>
         </div>
 
-        <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Hifzio Guard. All rights reserved.</p>
+        {/* Bottom bar */}
+        <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-4 border-t border-border/50 pt-8 text-xs text-muted-foreground">
+          <p>© {new Date().getFullYear()} Hifzio Guard · A product of Hifzio Technologies</p>
+          <p>Built with care for families everywhere.</p>
         </div>
       </div>
     </footer>
