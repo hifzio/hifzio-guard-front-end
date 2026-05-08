@@ -1,6 +1,7 @@
 import { Twitter, Linkedin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import Logo from "@/assets/hifzio_guard_with_text.svg";
+import LogoDark from "@/assets/hifzio_guard_with_text_dark.svg";
 
 const PRODUCT_LINKS = [
   { label: "Home", path: "/" },
@@ -28,7 +29,8 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-5 space-y-4">
             <Link to="/" className="inline-block hover:opacity-80 transition-opacity">
-              <img src={Logo} alt="Hifzio Guard" className="h-8 w-auto" />
+              <img src={Logo} alt="Hifzio Guard" className="h-11 w-auto dark:hidden" />
+              <img src={LogoDark} alt="Hifzio Guard" className="h-11 w-auto hidden dark:block" />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
               The ultimate digital protection app for your family. Block adult content, reduce digital addiction, and stay safe online.

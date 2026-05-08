@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "./ModeToggle";
 import Logo from "@/assets/hifzio_guard_with_text.svg";
+import LogoDark from "@/assets/hifzio_guard_with_text_dark.svg";
 
 const NAV_LINKS = [
   { name: "Home", hash: "#home" },
@@ -62,7 +63,8 @@ const Header = () => {
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center shrink-0 hover:opacity-80 transition-opacity">
-          <img src={Logo} alt="Hifzio Guard" className="h-8 w-auto" />
+          <img src={Logo} alt="Hifzio Guard" className="h-11 w-auto dark:hidden" />
+          <img src={LogoDark} alt="Hifzio Guard" className="h-11 w-auto hidden dark:block" />
         </Link>
 
         {/* Desktop nav */}
