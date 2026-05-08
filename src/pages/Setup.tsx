@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import PageLayout from "@/components/layout/PageLayout";
 import { ContentError, ContentLoading } from "@/components/ContentState";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useSetupContent } from "@/hooks/useContentData";
@@ -37,14 +36,14 @@ const Setup = () => {
     }
   }, [data, selectedDevice]);
 
-  if (isPending || (!data && !selectedDevice)) return <PageLayout><ContentLoading message="Loading setup guide..." /></PageLayout>;
-  if (isError || !data) return <PageLayout><ContentError onRetry={() => refetch()} /></PageLayout>;
+  if (isPending || (!data && !selectedDevice)) return <div className="py-20"><ContentLoading message="Loading setup guide..." /></div>;
+  if (isError || !data) return <div className="py-20"><ContentError onRetry={() => refetch()} /></div>;
 
   const dnsServers = data.dnsServers;
   const activeDevice = selectedDevice ?? data.guides[0].id;
 
   return (
-    <PageLayout>
+    <>
       {/* ─── PAGE HEADER ────────────────────────────────── */}
       <section className="relative bg-background border-b border-border/50">
         <div className="pointer-events-none absolute inset-0 bg-hero-gradient" />
@@ -230,7 +229,7 @@ const Setup = () => {
           </div>
         </div>
       </section>
-    </PageLayout>
+    </>
   );
 };
 

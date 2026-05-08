@@ -1,4 +1,3 @@
-import PageLayout from "@/components/layout/PageLayout";
 import { ContentError, ContentLoading } from "@/components/ContentState";
 import {
   Accordion,
@@ -12,11 +11,11 @@ import { Mail } from "lucide-react";
 const FAQ = () => {
   const { data, isPending, isError, refetch } = useFaqContent();
 
-  if (isPending) return <PageLayout><ContentLoading message="Loading FAQs..." /></PageLayout>;
-  if (isError || !data) return <PageLayout><ContentError onRetry={() => refetch()} /></PageLayout>;
+  if (isPending) return <div className="py-20"><ContentLoading message="Loading FAQs..." /></div>;
+  if (isError || !data) return <div className="py-20"><ContentError onRetry={() => refetch()} /></div>;
 
   return (
-    <PageLayout>
+    <>
       {/* ─── PAGE HEADER ────────────────────────────────── */}
       <section className="relative bg-background border-b border-border/50">
         <div className="pointer-events-none absolute inset-0 bg-hero-gradient" />
@@ -79,7 +78,7 @@ const FAQ = () => {
           </div>
         </div>
       </section>
-    </PageLayout>
+    </>
   );
 };
 

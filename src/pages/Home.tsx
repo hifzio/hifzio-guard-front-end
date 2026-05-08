@@ -8,6 +8,9 @@ import { useHomeContent } from "@/hooks/useContentData";
 import { getIconByName } from "@/lib/icon-map";
 import { ContentError, ContentLoading } from "@/components/ContentState";
 import { testimonials } from "@/data/static-content";
+import Features from "./Features";
+import Setup from "./Setup";
+import FAQ from "./FAQ";
 
 const accentColors: Record<string, { bg: string; text: string; border: string }> = {
   primary: { bg: "bg-indigo-50", text: "text-indigo-600", border: "border-indigo-100" },
@@ -39,6 +42,7 @@ const Home = () => {
   return (
     <PageLayout mainClassName="flex flex-col">
 
+      <div id="home">
       {/* ─── HERO ─────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-background">
         {/* Subtle radial glow */}
@@ -65,15 +69,27 @@ const Home = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Link to={hero.primaryCta.href}>
-                <Button
-                  size="lg"
-                  className="h-12 px-8 text-base font-semibold rounded-xl bg-primary hover:bg-primary-dark text-white shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30 transition-all flex items-center gap-2"
-                >
-                  <Download className="h-5 w-5" />
-                  {hero.primaryCta.label}
-                </Button>
-              </Link>
+              {hero.primaryCta.href.startsWith("http") ? (
+                <a href={hero.primaryCta.href} target="_blank" rel="noreferrer noopener">
+                  <Button
+                    size="lg"
+                    className="h-12 px-8 text-base font-semibold rounded-xl bg-primary hover:bg-primary-dark text-white shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30 transition-all flex items-center gap-2"
+                  >
+                    <Download className="h-5 w-5" />
+                    {hero.primaryCta.label}
+                  </Button>
+                </a>
+              ) : (
+                <Link to={hero.primaryCta.href}>
+                  <Button
+                    size="lg"
+                    className="h-12 px-8 text-base font-semibold rounded-xl bg-primary hover:bg-primary-dark text-white shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30 transition-all flex items-center gap-2"
+                  >
+                    <Download className="h-5 w-5" />
+                    {hero.primaryCta.label}
+                  </Button>
+                </Link>
+              )}
               {hero.secondaryCta && (
                 <Link to={hero.secondaryCta.href}>
                   <Button
@@ -211,18 +227,42 @@ const Home = () => {
               <p className="text-primary-foreground/80 text-base leading-relaxed mb-8 max-w-lg mx-auto">
                 {finalCta.subheading}
               </p>
-              <Link to={finalCta.cta.href}>
-                <Button
-                  size="lg"
-                  className="h-12 px-8 text-base font-semibold rounded-xl bg-white text-primary hover:bg-white/90 shadow-lg transition-all"
-                >
-                  {finalCta.cta.label}
-                </Button>
-              </Link>
+              {finalCta.cta.href.startsWith("http") ? (
+                <a href={finalCta.cta.href} target="_blank" rel="noreferrer noopener">
+                  <Button
+                    size="lg"
+                    className="h-12 px-8 text-base font-semibold rounded-xl bg-white text-primary hover:bg-white/90 shadow-lg transition-all"
+                  >
+                    {finalCta.cta.label}
+                  </Button>
+                </a>
+              ) : (
+                <Link to={finalCta.cta.href}>
+                  <Button
+                    size="lg"
+                    className="h-12 px-8 text-base font-semibold rounded-xl bg-white text-primary hover:bg-white/90 shadow-lg transition-all"
+                  >
+                    {finalCta.cta.label}
+                  </Button>
+                </Link>
+              )}
             </div>
           </div>
         </div>
       </section>
+      </div>
+
+      <div id="features">
+        <Features />
+      </div>
+
+      <div id="setup">
+        <Setup />
+      </div>
+
+      <div id="faq">
+        <FAQ />
+      </div>
 
     </PageLayout>
   );

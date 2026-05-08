@@ -1,4 +1,3 @@
-import PageLayout from "@/components/layout/PageLayout";
 import { ContentError, ContentLoading } from "@/components/ContentState";
 import { useFeatureContent } from "@/hooks/useContentData";
 import { getIconByName } from "@/lib/icon-map";
@@ -15,11 +14,11 @@ const accentColors: Record<string, { bg: string; text: string; border: string }>
 const Features = () => {
   const { data, isPending, isError, refetch } = useFeatureContent();
 
-  if (isPending) return <PageLayout><ContentLoading message="Loading features..." /></PageLayout>;
-  if (isError || !data) return <PageLayout><ContentError onRetry={() => refetch()} /></PageLayout>;
+  if (isPending) return <div className="py-20"><ContentLoading message="Loading features..." /></div>;
+  if (isError || !data) return <div className="py-20"><ContentError onRetry={() => refetch()} /></div>;
 
   return (
-    <PageLayout>
+    <>
       {/* ─── PAGE HEADER ────────────────────────────────── */}
       <section className="relative bg-background border-b border-border/50 overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-[800px] bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
@@ -91,7 +90,7 @@ const Features = () => {
           </div>
         </div>
       </section>
-    </PageLayout>
+    </>
   );
 };
 

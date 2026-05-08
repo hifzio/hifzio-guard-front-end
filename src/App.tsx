@@ -4,11 +4,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, useNavigate, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
-import Features from "./pages/Features";
-import Setup from "./pages/Setup";
-import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
@@ -46,9 +43,9 @@ const App = () => (
         <AuthRedirectWatcher />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/features" element={<Features />} />
-          <Route path="/setup" element={<Setup />} />
-          <Route path="/faq" element={<FAQ />} />
+          <Route path="/features" element={<Navigate to="/#features" replace />} />
+          <Route path="/setup" element={<Navigate to="/#setup" replace />} />
+          <Route path="/faq" element={<Navigate to="/#faq" replace />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/delete-account" element={<DeleteAccount />} />

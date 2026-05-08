@@ -25,7 +25,7 @@ export const homeContent: HomeContent = {
       "Hifzio Guard is an all-in-one digital protection app that blocks adult content, helps reduce digital addiction, and keeps your devices safe. Protect your faith, family, & future.",
     primaryCta: {
       label: "Download Free App",
-      href: "/setup",
+      href: "https://play.google.com/store/apps/details?id=com.wequitech.wequi_guard&pcampaignid=web_share",
       variant: "secondary",
     },
     secondaryCta: {
@@ -88,7 +88,7 @@ export const homeContent: HomeContent = {
       "Join thousands of families using the Hifzio Guard app to block harmful content and break digital addictions.",
     cta: {
       label: "Download Hifzio Guard",
-      href: "/setup",
+      href: "https://play.google.com/store/apps/details?id=com.wequitech.wequi_guard&pcampaignid=web_share",
       variant: "secondary",
     },
   },
