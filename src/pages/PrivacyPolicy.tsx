@@ -296,10 +296,10 @@ const PrivacyPolicy = () => {
               Learn how Hifzio Guard collects, uses, protects, and deletes information across our app and services.
             </p>
             <div className="flex flex-wrap gap-3 text-sm text-white/80">
-              <span className="rounded-full bg-white/10 px-3 py-1 backdrop-blur">
+              <span className="rounded-full bg-background/10 px-3 py-1 backdrop-blur">
                 Effective date: {policyMeta.effectiveDate}
               </span>
-              <span className="rounded-full bg-white/10 px-3 py-1 backdrop-blur">
+              <span className="rounded-full bg-background/10 px-3 py-1 backdrop-blur">
                 Last updated: {policyMeta.lastUpdated}
               </span>
             </div>
@@ -307,7 +307,7 @@ const PrivacyPolicy = () => {
               <button
                 type="button"
                 onClick={handlePrint}
-                className="inline-flex items-center gap-2 rounded-md bg-white/15 px-4 py-2 text-sm font-semibold text-primary-foreground shadow-soft transition hover:-translate-y-0.5 hover:bg-white/25"
+                className="inline-flex items-center gap-2 rounded-md bg-background/15 px-4 py-2 text-sm font-semibold text-primary-foreground shadow-soft transition hover:-translate-y-0.5 hover:bg-background/25"
               >
                 <Printer className="h-4 w-4" />
                 Print
@@ -315,7 +315,7 @@ const PrivacyPolicy = () => {
               <button
                 type="button"
                 onClick={handleCopyLink}
-                className="inline-flex items-center gap-2 rounded-md bg-white/15 px-4 py-2 text-sm font-semibold text-primary-foreground shadow-soft transition hover:-translate-y-0.5 hover:bg-white/25"
+                className="inline-flex items-center gap-2 rounded-md bg-background/15 px-4 py-2 text-sm font-semibold text-primary-foreground shadow-soft transition hover:-translate-y-0.5 hover:bg-background/25"
               >
                 <Link2 className="h-4 w-4" />
                 Copy link
@@ -376,13 +376,13 @@ const PrivacyPolicy = () => {
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <a
-                      className="inline-flex w-fit items-center justify-center rounded-md bg-white/15 px-4 py-2 text-sm font-semibold transition hover:-translate-y-0.5 hover:bg-white/25"
+                      className="inline-flex w-fit items-center justify-center rounded-md bg-background/15 px-4 py-2 text-sm font-semibold transition hover:-translate-y-0.5 hover:bg-background/25"
                       href={`mailto:${policyMeta.supportEmail}`}
                     >
                       {policyMeta.supportEmail}
                     </a>
                     <a
-                      className="inline-flex w-fit items-center justify-center rounded-md bg-white/15 px-4 py-2 text-sm font-semibold transition hover:-translate-y-0.5 hover:bg-white/25"
+                      className="inline-flex w-fit items-center justify-center rounded-md bg-background/15 px-4 py-2 text-sm font-semibold transition hover:-translate-y-0.5 hover:bg-background/25"
                       href={policyMeta.deleteAccountUrl}
                     >
                       Delete account page

@@ -43,11 +43,11 @@ const Login = () => {
   };
 
   return (
-    <div className="flex min-h-screen flex-col bg-slate-50">
+    <div className="flex min-h-screen flex-col bg-muted">
       <div className="flex flex-1 items-center justify-center px-6 py-12">
-        <Card className="w-full max-w-md border-slate-200 shadow-lg">
+        <Card className="w-full max-w-md border-border shadow-lg">
           <CardHeader className="space-y-2 text-center">
-            <CardTitle className="text-2xl font-semibold text-slate-900">Sign in to Hifzio Guard</CardTitle>
+            <CardTitle className="text-2xl font-semibold text-foreground">Sign in to Hifzio Guard</CardTitle>
             <CardDescription>Monitor your network and manage policies securely.</CardDescription>
           </CardHeader>
           <CardContent>
@@ -80,7 +80,7 @@ const Login = () => {
                 {submitting ? "Signing in..." : "Sign in"}
               </Button>
             </form>
-            <p className="mt-6 text-center text-sm text-slate-500">
+            <p className="mt-6 text-center text-sm text-muted-foreground">
               Need an account?{" "}
               <Link to="/setup" className="font-semibold text-primary hover:underline">
                 View setup guide

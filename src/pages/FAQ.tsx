@@ -18,7 +18,7 @@ const FAQ = () => {
   return (
     <PageLayout>
       {/* ─── PAGE HEADER ────────────────────────────────── */}
-      <section className="relative bg-white border-b border-border/50">
+      <section className="relative bg-background border-b border-border/50">
         <div className="pointer-events-none absolute inset-0 bg-hero-gradient" />
         <div className="container relative z-10 py-16 md:py-20 text-center">
           <p className="section-label mb-3">FAQ</p>
@@ -35,7 +35,7 @@ const FAQ = () => {
       </section>
 
       {/* ─── ACCORDION ──────────────────────────────────── */}
-      <section className="py-14 md:py-20 bg-white">
+      <section className="py-14 md:py-20 bg-background">
         <div className="container max-w-3xl">
           <div className="card-base overflow-hidden divide-y divide-border/60">
             <Accordion type="single" collapsible className="w-full">
@@ -59,7 +59,7 @@ const FAQ = () => {
       </section>
 
       {/* ─── CONTACT CARD ───────────────────────────────── */}
-      <section className="pb-16 md:pb-24 bg-white">
+      <section className="pb-16 md:pb-24 bg-background">
         <div className="container max-w-3xl">
           <div className="rounded-2xl border border-border/60 bg-muted/30 p-8 text-center">
             <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary mb-4">

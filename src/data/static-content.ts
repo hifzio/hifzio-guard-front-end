@@ -22,72 +22,72 @@ export const homeContent: HomeContent = {
   hero: {
     title: "Keep Your Family Safe Online, Effortlessly",
     description:
-      "Hifzio Guard is a free, privacy-first filter that blocks adult content, gambling, and online threats across your entire home Wi-Fi. Protect all your devices instantly—no apps required.",
+      "Hifzio Guard is an all-in-one digital protection app that blocks adult content, helps reduce digital addiction, and keeps your devices safe. Protect your faith, family, & future.",
     primaryCta: {
-      label: "Start Free Protection",
+      label: "Download Free App",
       href: "/setup",
       variant: "secondary",
     },
     secondaryCta: {
-      label: "See how it works →",
+      label: "See premium features →",
       href: "/features",
       variant: "outline",
     },
     media: {
       type: "image",
       src: heroImage,
-      alt: "Hifzio Guard dashboard showing family-safe internet protection across home devices",
+      alt: "Hifzio Guard app interface showing family-safe internet protection",
     },
   },
   socialProof: [
     {
-      icon: "zap",
-      label: "Set up in 5 minutes",
+      icon: "smartphone",
+      label: "Available everywhere",
       description:
-        "No apps to install. Just update one setting on your router to protect your whole home.",
+        "Download the app for iOS, Android, macOS, and Windows to protect every device you own.",
     },
     {
       icon: "shieldCheck",
-      label: "Total home protection",
+      label: "Total device protection",
       description:
-        "Phones, tablets, TVs, and consoles all get the same family-safe protection automatically.",
+        "Block adult content, addictive social media reels, and unwanted apps directly on the device.",
     },
     {
       icon: "lock",
       label: "100% private, zero logs",
       description:
-        "We never track, store, or sell your browsing history. Your family's privacy comes first.",
+        "Your data never leaves your device. We never track, store, or sell your browsing history.",
     },
   ],
   steps: [
     {
-      icon: "shield",
-      title: "1. Choose your safety level",
+      icon: "smartphone",
+      title: "1. Download the App",
       description:
-        "Select a family-friendly profile designed to block harmful sites while keeping the internet useful and fun.",
+        "Install Hifzio Guard from the App Store or Google Play for free.",
       accent: "primary",
     },
     {
       icon: "settings",
-      title: "2. Update your connection",
+      title: "2. Create your Profile",
       description:
-        "Follow our simple, step-by-step guide to connect your router or device to Hifzio Guard.",
+        "Set up parental controls, app blockers, and time limits to suit your family's needs.",
       accent: "secondary",
     },
     {
       icon: "checkCircle",
-      title: "3. Browse with peace of mind",
+      title: "3. Browse Safely",
       description:
-        "Adult content, scams, and malware are blocked instantly. Safe browsing begins right away.",
+        "Adult content, gambling, and addictive reels are blocked instantly across all your apps.",
       accent: "accent",
     },
   ],
   finalCta: {
-    heading: "Ready for a safer internet?",
+    heading: "Ready for a safer digital home?",
     subheading:
-      "Join thousands of families using Hifzio Guard to block harmful content and protect their homes. It's completely free, forever.",
+      "Join thousands of families using the Hifzio Guard app to block harmful content and break digital addictions.",
     cta: {
-      label: "Set up Hifzio Guard",
+      label: "Download Hifzio Guard",
       href: "/setup",
       variant: "secondary",
     },
@@ -96,19 +96,19 @@ export const homeContent: HomeContent = {
 
 export const testimonials = [
   {
-    quote: "I used to worry every time my kids borrowed my iPad. Since setting up Hifzio Guard on our router, I have total peace of mind.",
+    quote: "I used to worry every time my kids borrowed my iPad. Since installing the Hifzio Guard app, I have total peace of mind.",
     author: "Sarah Jenkins",
     role: "Mother of two",
     avatar: "https://i.pravatar.cc/150?u=sarah"
   },
   {
-    quote: "The best part is that there are no apps to install. I changed one setting, and now every device in the house is safe.",
+    quote: "The app blocker is a lifesaver. I can finally stop my kids from watching addictive YouTube Shorts and TikToks.",
     author: "Michael T.",
     role: "Parent & Teacher",
     avatar: "https://i.pravatar.cc/150?u=michael"
   },
   {
-    quote: "Finally, a solution that respects our privacy. Free, fast, and doesn't log our browsing history.",
+    quote: "The Auto-silent during Salah feature is incredible. It helps me stay focused and present. A must-have app.",
     author: "Elena R.",
     role: "Privacy Advocate",
     avatar: "https://i.pravatar.cc/150?u=elena"
@@ -116,57 +116,57 @@ export const testimonials = [
 ];
 
 export const featureContent: FeatureContent = {
-  title: "Powerful DNS parental control for clean, safe home internet",
+  title: "Comprehensive device-level protection for your family",
   description:
-    "Hifzio Guard filters traffic at the DNS layer so every device on your Wi-Fi gets the same family-safe protection. Block adult and harmful websites, enforce SafeSearch, reduce malware and phishing risks, and keep your privacy with a fast, zero-log DNS resolver.",
+    "Hifzio Guard goes beyond basic DNS filtering. It offers powerful device-level tools like App Blocking, Social Media Reels filtering, and Parental Controls to ensure your family's digital space remains safe, focused, and free from addiction.",
   features: [
     {
-      icon: "shieldBan",
-      title: "Block harmful & adult content",
+      icon: "smartphone",
+      title: "App & Website Blocker",
       description:
-        "Automatically stop pornography, explicit and obscene sites, gambling, dating, and other unsafe categories before pages ever load on your devices.",
+        "Seamlessly block unlimited apps and customize website access across your entire device. Stop addictive games or social media apps with one tap.",
       accent: "primary",
     },
     {
-      icon: "search",
-      title: "SafeSearch & YouTube Restricted",
+      icon: "video",
+      title: "Block Reels & Shorts",
       description:
-        "Force SafeSearch on major search engines and lock YouTube into Restricted Mode to hide adult and sensitive videos across browsers and devices.",
+        "Break free from digital addiction. Block distracting features like YouTube Shorts, Instagram Reels, and Facebook Reels to stay focused on what matters.",
       accent: "secondary",
     },
     {
       icon: "shieldCheck",
-      title: "Malware & phishing shield",
+      title: "Parental Controls",
       description:
-        "Use constantly updated threat intelligence to block known malware, spyware, phishing, and scam domains—helping secure every click on your network.",
+        "Shield your kids from online harm. Enforce SafeSearch, block adult content, and monitor device usage right from your phone.",
       accent: "accent",
     },
     {
-      icon: "lock",
-      title: "Privacy-first DNS with zero logs",
+      icon: "bellOff",
+      title: "Auto-Silent during Salah",
       description:
-        "We operate with a strict zero-logs stance. We don’t store or sell your browsing history, and we don’t build advertising profiles from your DNS traffic.",
+        "Hifzio Guard automatically mutes your device during prayer times based on your location, helping you stay present when it matters most.",
       accent: "primary",
     },
     {
-      icon: "laptop",
-      title: "Network-wide coverage",
+      icon: "lock",
+      title: "Privacy-first, Zero Logs",
       description:
-        "Set Hifzio Guard at the router once and every connected device—including guest and smart home devices—automatically benefits from the same DNS filtering.",
+        "All device-level data stays on your device. We don't store or sell your browsing history, and we don't build advertising profiles.",
       accent: "secondary",
     },
     {
-      icon: "dollarSign",
-      title: "Free forever for families",
+      icon: "laptop",
+      title: "Network-wide DNS",
       description:
-        "Hifzio Guard’s core family-safe DNS filter is free to use with no trials, no credit card, and no surprise upsells—because safe internet should be accessible.",
+        "Need protection for the whole house? You can still configure Hifzio Guard on your router to protect smart TVs, consoles, and guest devices.",
       accent: "accent",
     },
   ],
   supportingStatement: {
-    title: "Network-level protection without extra apps",
+    title: "More than just a DNS filter",
     description:
-      "Unlike browser extensions or per-device parental control apps, Hifzio Guard runs at the DNS layer. Once your router or devices use our DNS servers, every phone, laptop, TV, console, and smart device on that network automatically gets the same clean, family-safe browsing experience.",
+      "Unlike basic DNS services that only block ads or malware, Hifzio Guard provides deep device-level control. From muting your phone during prayer to blocking specific app features like TikTok or YouTube Shorts, we give you complete control over your digital environment.",
   },
 };
 

@@ -52,7 +52,7 @@ export function SetupCheckWidget() {
   const cfg = STATUS_CONFIG[status];
 
   return (
-    <div className="rounded-2xl border border-border/60 bg-white shadow-sm p-5 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+    <div className="rounded-2xl border border-border/60 bg-background shadow-sm p-5 flex flex-col sm:flex-row items-start sm:items-center gap-4">
       {/* Status icon */}
       <div className={`shrink-0 flex h-10 w-10 items-center justify-center rounded-xl ${cfg.bgColor}`}>
         {cfg.icon}

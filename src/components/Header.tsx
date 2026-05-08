@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ModeToggle } from "./ModeToggle";
 import Logo from "@/assets/hifzio_guard_with_text.svg";
 
 const NAV_LINKS = [
@@ -44,6 +45,7 @@ const Header = () => {
 
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3">
+          <ModeToggle />
           <Link to="/setup">
             <Button
               size="sm"
@@ -55,18 +57,21 @@ const Header = () => {
         </div>
 
         {/* Mobile toggle */}
-        <button
-          className="md:hidden p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-all"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          <ModeToggle />
+          <button
+            className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-all"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile drawer */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-border/40 bg-white/95 backdrop-blur-xl">
+        <div className="md:hidden border-t border-border/40 bg-background/95 backdrop-blur-xl">
           <div className="container py-4 space-y-1">
             {NAV_LINKS.map((link) => (
               <Link

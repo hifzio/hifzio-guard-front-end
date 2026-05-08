@@ -7,9 +7,9 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const accentColors: Record<string, { bg: string; text: string; border: string }> = {
-  primary: { bg: "bg-indigo-50", text: "text-indigo-600", border: "border-indigo-100" },
-  secondary: { bg: "bg-violet-50", text: "text-violet-600", border: "border-violet-100" },
-  accent: { bg: "bg-sky-50", text: "text-sky-600", border: "border-sky-100" },
+  primary: { bg: "bg-primary/10", text: "text-primary", border: "border-primary/20" },
+  secondary: { bg: "bg-secondary/10", text: "text-secondary", border: "border-secondary/20" },
+  accent: { bg: "bg-accent/10", text: "text-accent", border: "border-accent/20" },
 };
 
 const Features = () => {
@@ -21,15 +21,15 @@ const Features = () => {
   return (
     <PageLayout>
       {/* ─── PAGE HEADER ────────────────────────────────── */}
-      <section className="relative bg-white border-b border-border/50">
-        <div className="pointer-events-none absolute inset-0 bg-hero-gradient" />
-        <div className="container relative z-10 py-16 md:py-20">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="section-label mb-3">Features</p>
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-5">
+      <section className="relative bg-background border-b border-border/50 overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-[800px] bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
+        <div className="container relative z-10 py-24 md:py-32">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="section-label mb-4 animate-fade-up" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>Features</p>
+            <h1 className="text-5xl font-extrabold tracking-tight text-foreground sm:text-6xl mb-6 animate-fade-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
               {data.title}
             </h1>
-            <p className="text-base text-muted-foreground leading-relaxed max-w-xl mx-auto">
+            <p className="text-xl text-muted-foreground leading-relaxed mx-auto animate-fade-up" style={{ animationDelay: '0.3s', animationFillMode: 'both' }}>
               {data.description}
             </p>
           </div>
@@ -37,24 +37,32 @@ const Features = () => {
       </section>
 
       {/* ─── FEATURES GRID ──────────────────────────────── */}
-      <section className="py-16 md:py-24 bg-muted/20">
+      <section className="py-20 md:py-32 bg-muted/20">
         <div className="container">
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto auto-rows-[minmax(250px,auto)]">
             {data.features.map((feature, idx) => {
               const Icon = getIconByName(feature.icon);
               const color = accentColors[feature.accent] ?? accentColors.primary;
+              const spanClass = (idx % 3 === 0) ? "md:col-span-2 lg:col-span-2" : "col-span-1";
+              
               return (
                 <div
                   key={feature.title}
-                  className="card-base card-hover p-7 flex flex-col gap-5"
+                  className={`group relative card-base card-hover p-8 flex flex-col justify-between overflow-hidden animate-fade-up ${spanClass}`}
+                  style={{ animationDelay: `${0.1 * idx}s`, animationFillMode: 'both' }}
                 >
-                  <div className={`inline-flex h-12 w-12 items-center justify-center rounded-xl border ${color.bg} ${color.text} ${color.border}`}>
-                    <Icon className="h-6 w-6" aria-hidden />
+                  <div className={`mb-8 inline-flex h-16 w-16 items-center justify-center rounded-2xl border ${color.bg} ${color.text} ${color.border} shadow-sm transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3`}>
+                    <Icon className="h-8 w-8" aria-hidden />
                   </div>
-                  <div>
-                    <h3 className="text-base font-semibold text-foreground mb-2">{feature.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
+                  <div className="relative z-10 mt-auto">
+                    <h3 className="text-xl font-bold text-foreground mb-3">{feature.title}</h3>
+                    <p className="text-base text-muted-foreground leading-relaxed">{feature.description}</p>
                   </div>
+                  
+                  {/* Decorative background blur for wide items */}
+                  {(idx % 3 === 0) && (
+                     <div className={`absolute -right-20 -bottom-20 w-64 h-64 rounded-full ${color.bg} blur-[80px] opacity-60 pointer-events-none transition-opacity duration-500 group-hover:opacity-100`}></div>
+                  )}
                 </div>
               );
             })}
@@ -63,18 +71,20 @@ const Features = () => {
       </section>
 
       {/* ─── SUPPORTING STATEMENT ────────────────────────── */}
-      <section className="py-16 md:py-24 bg-white border-t border-border/50">
-        <div className="container">
-          <div className="mx-auto max-w-xl rounded-2xl bg-primary p-10 text-center shadow-xl shadow-primary/20 relative overflow-hidden">
-            <div className="pointer-events-none absolute -top-12 -right-12 h-40 w-40 rounded-full bg-white/10 blur-2xl" />
-            <div className="relative z-10">
-              <h2 className="text-2xl font-bold text-white mb-3">{data.supportingStatement.title}</h2>
-              <p className="text-primary-foreground/80 text-sm leading-relaxed mb-6">
+      <section className="py-20 md:py-32 bg-background border-t border-border/50 relative overflow-hidden">
+        <div className="container relative z-10">
+          <div className="mx-auto max-w-4xl rounded-[2.5rem] bg-slate-900 dark:bg-slate-950 p-12 md:p-20 text-center shadow-2xl relative overflow-hidden border border-slate-800">
+            <div className="pointer-events-none absolute -top-1/4 -right-1/4 h-[500px] w-[500px] rounded-full bg-primary/30 blur-[120px]" />
+            <div className="pointer-events-none absolute -bottom-1/4 -left-1/4 h-[500px] w-[500px] rounded-full bg-secondary/20 blur-[120px]" />
+            
+            <div className="relative z-10 animate-fade-up">
+              <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight leading-[1.1]">{data.supportingStatement.title}</h2>
+              <p className="text-slate-300 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
                 {data.supportingStatement.description}
               </p>
               <Link to="/setup">
-                <Button size="sm" className="bg-white text-primary hover:bg-white/90 font-semibold rounded-lg h-10 px-6 shadow-md">
-                  Get Started Free <ArrowRight className="ml-1.5 h-4 w-4" />
+                <Button size="lg" className="h-14 px-10 text-lg font-semibold rounded-2xl bg-white text-slate-900 hover:bg-slate-100 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] transition-all hover:scale-105 hover:shadow-[0_0_60px_-15px_rgba(255,255,255,0.5)]">
+                  Get Started Free <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
             </div>

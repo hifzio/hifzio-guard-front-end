@@ -37,7 +37,7 @@ const ProfileDetails = ({ user }: { user: AuthUser }) => {
   const status = (user?.is_active ?? false) ? "Active" : "Inactive";
 
   return (
-    <Card className="rounded-3xl border border-slate-200 shadow-lg">
+    <Card className="rounded-3xl border border-border shadow-lg">
       <CardHeader className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div>
           <CardTitle className="text-2xl font-semibold capitalize">{displayName}</CardTitle>
@@ -60,14 +60,14 @@ const ProfileDetails = ({ user }: { user: AuthUser }) => {
 };
 
 const ProfileField = ({ label, value }: { label: string; value: string }) => (
-  <div className="rounded-2xl border border-slate-200 bg-white/80 p-4">
-    <p className="text-xs uppercase text-slate-500">{label}</p>
-    <p className="text-sm font-semibold text-slate-900">{value}</p>
+  <div className="rounded-2xl border border-border bg-background/80 p-4">
+    <p className="text-xs uppercase text-muted-foreground">{label}</p>
+    <p className="text-sm font-semibold text-foreground">{value}</p>
   </div>
 );
 
 const ProfileSkeleton = () => (
-  <Card className="rounded-3xl border border-slate-200 shadow-lg">
+  <Card className="rounded-3xl border border-border shadow-lg">
     <CardHeader className="space-y-3">
       <Skeleton className="h-6 w-40 rounded" />
       <Skeleton className="h-4 w-64 rounded" />

@@ -14,6 +14,8 @@ import {
   Smartphone,
   Users,
   Zap,
+  Video,
+  BellOff,
 } from "lucide-react";
 
 const iconMap = {
@@ -31,6 +33,8 @@ const iconMap = {
   dollarSign: DollarSign,
   router: Router,
   smartphone: Smartphone,
+  video: Video,
+  bellOff: BellOff,
 } satisfies Record<string, LucideIcon>;
 
 export type IconName = keyof typeof iconMap;

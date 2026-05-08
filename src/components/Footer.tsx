@@ -31,7 +31,7 @@ const Footer = () => {
               <img src={Logo} alt="Hifzio Guard" className="h-8 w-auto" />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
-              Free, privacy-first DNS filtering that keeps your family safe online — no apps, no subscriptions.
+              The ultimate digital protection app for your family. Block adult content, reduce digital addiction, and stay safe online.
             </p>
             <div className="flex gap-2">
               {SOCIALS.map(({ icon: Icon, href, label }) => (
@@ -82,9 +82,9 @@ const Footer = () => {
             <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Protect Your Family</p>
             <Link
               to="/setup"
-              className="inline-flex h-9 items-center justify-center rounded-lg bg-primary px-4 text-sm font-semibold text-white hover:bg-primary-dark shadow-sm shadow-primary/20 transition-all"
+              className="inline-flex h-10 items-center justify-center rounded-lg bg-primary px-5 text-sm font-semibold text-white hover:bg-primary-dark shadow-sm shadow-primary/20 transition-all"
             >
-              Get Started Free
+              Download App
             </Link>
           </div>
         </div>

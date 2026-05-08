@@ -1,4 +1,4 @@
-import { ShieldCheck, Star, CheckCircle2, Zap, Lock } from "lucide-react";
+import { ShieldCheck, Star, CheckCircle2, Zap, Lock, Download, Smartphone } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import PageLayout from "@/components/layout/PageLayout";
@@ -40,7 +40,7 @@ const Home = () => {
     <PageLayout mainClassName="flex flex-col">
 
       {/* ─── HERO ─────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-white">
+      <section className="relative overflow-hidden bg-background">
         {/* Subtle radial glow */}
         <div className="pointer-events-none absolute inset-0 bg-hero-gradient" />
 
@@ -49,11 +49,11 @@ const Home = () => {
             {/* Badge */}
             <div className="mb-6 inline-flex items-center gap-2 badge">
               <ShieldCheck className="h-3.5 w-3.5" />
-              <span>100% Free · No App Required</span>
+              <span>Available on iOS, Android & Windows</span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl leading-[1.1] mb-6">
+            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl leading-[1.1] mb-6">
               {hero.title.split(",")[0]},
               <span className="block gradient-text">{hero.title.split(",")[1]?.trim()}</span>
             </h1>
@@ -68,8 +68,9 @@ const Home = () => {
               <Link to={hero.primaryCta.href}>
                 <Button
                   size="lg"
-                  className="h-12 px-8 text-base font-semibold rounded-xl bg-primary hover:bg-primary-dark text-white shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30 transition-all"
+                  className="h-12 px-8 text-base font-semibold rounded-xl bg-primary hover:bg-primary-dark text-white shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30 transition-all flex items-center gap-2"
                 >
+                  <Download className="h-5 w-5" />
                   {hero.primaryCta.label}
                 </Button>
               </Link>
@@ -117,7 +118,7 @@ const Home = () => {
       </section>
 
       {/* ─── HOW IT WORKS ─────────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-background">
         <div className="container">
           {/* Heading */}
           <div className="mx-auto max-w-2xl text-center mb-14">
@@ -198,7 +199,7 @@ const Home = () => {
       </section>
 
       {/* ─── FINAL CTA ────────────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-white border-t border-border/50">
+      <section className="py-20 md:py-28 bg-background border-t border-border/50">
         <div className="container">
           <div className="mx-auto max-w-2xl rounded-2xl bg-primary p-12 text-center shadow-xl shadow-primary/20 relative overflow-hidden">
             {/* Decorative blobs */}

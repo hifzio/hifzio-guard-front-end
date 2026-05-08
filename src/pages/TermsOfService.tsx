@@ -68,7 +68,7 @@ const TermsOfService = () => (
 
         <div className="grid gap-6 md:grid-cols-2">
           {commitments.map((section) => (
-            <Card key={section.title} className="h-full border border-white/10 bg-white/10 p-6 shadow-soft backdrop-blur">
+            <Card key={section.title} className="h-full border border-white/10 bg-background/10 p-6 shadow-soft backdrop-blur">
               <div className="space-y-3">
                 <h3 className="text-xl font-semibold text-primary-foreground">{section.title}</h3>
                 <ul className="space-y-2 text-sm text-primary-foreground/80">
